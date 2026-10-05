@@ -85,6 +85,18 @@
   border-color: transparent;
 }
 
+.btn--forms {
+  --btn-bg: linear-gradient(135deg, #7b1fa2 0%, #673ab7 100%);
+  --btn-fg: #fff;
+  --btn-border: transparent;
+  background: var(--btn-bg);
+}
+
+.btn--forms:hover {
+  box-shadow: 0 12px 30px -10px rgba(103, 58, 183, 0.6);
+  border-color: transparent;
+}
+
 .btn--ghost {
   --btn-bg: transparent;
   box-shadow: inset 0 0 0 1px var(--color-border-strong);
@@ -93,7 +105,8 @@
 /* ボタン上を光が流れるマイクロアニメーション */
 .btn--primary::after,
 .btn--accent::after,
-.btn--youtube::after {
+.btn--youtube::after,
+.btn--forms::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -107,7 +120,8 @@
 
 .btn--primary:hover::after,
 .btn--accent:hover::after,
-.btn--youtube:hover::after {
+.btn--youtube:hover::after,
+.btn--forms:hover::after {
   transform: translateX(120%);
 }
 

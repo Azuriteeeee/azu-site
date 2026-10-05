@@ -603,6 +603,42 @@
     }
   }
 
+  /* ---------- contents more ---------- */
+  function initContentsMore() {
+    var grid = $(".contents-grid");
+    var btn = $("#btn-more-contents");
+    if (!grid || !btn) return;
+    var items = Array.prototype.slice.call(grid.children);
+    var isExpanded = false;
+    var limit = window.innerWidth <= 768 ? 3 : 4;
+
+    function update() {
+      items.forEach(function (el, i) {
+        el.style.display = (isExpanded || i < limit) ? "" : "none";
+      });
+      btn.textContent = isExpanded ? "閉じる" : "もっと見る";
+      btn.style.display = items.length <= limit ? "none" : "";
+    }
+
+    update();
+    btn.addEventListener("click", function () {
+      isExpanded = !isExpanded;
+      update();
+    });
+
+    var timer;
+    window.addEventListener("resize", function () {
+      clearTimeout(timer);
+      timer = setTimeout(function () {
+        var newLimit = window.innerWidth <= 768 ? 3 : 4;
+        if (limit !== newLimit) {
+          limit = newLimit;
+          update();
+        }
+      }, 100);
+    });
+  }
+
   /* ---------- boot ---------- */
   function boot() {
     injectSprite();
@@ -618,6 +654,7 @@
     initLightbox();
     initContactForm();
     initReveal();
+    initContentsMore();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);

@@ -50,8 +50,7 @@
           <li><a href="#" class="site-nav__link" aria-current="page">HOME<small>ホーム</small></a></li>
           <li><a href="#videos" class="site-nav__link">VIDEOS<small>動画一覧</small></a></li>
           <li><a href="#about" class="site-nav__link">ABOUT<small>プロフィール</small></a></li>
-          <li><a href="games.html" class="site-nav__link">GAMES<small>やってるゲーム</small></a></li>
-          <li><a href="devices.html" class="site-nav__link">DEVICES<small>使ってるデバイス</small></a></li>
+          <li><a href="#contents" class="site-nav__link">CONTENTS<small>その他コンテンツ</small></a></li>
           <li><a href="videoedit.html" class="site-nav__link">EDIT<small>動画編集</small></a></li>
           <li><a href="#contact" class="site-nav__link">CONTACT<small>お仕事・コラボ</small></a></li>
         </ul>
@@ -237,13 +236,13 @@
     </section>
 
     <!-- Contents Links -->
-    <section class="section">
+    <section id="contents" class="section">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Contents</span>
           <h2 class="section-title" style="font-size: var(--fs-xl);">その他コンテンツ</h2>
         </div>
-        <div class="grid grid--3 reveal">
+        <div class="grid grid--2 contents-grid reveal">
           <a href="games.html" class="card card--link">
             <div class="card__media">
               <img src="img\タイトルなし.png" alt="プレイ中のゲーム" loading="lazy">
@@ -281,6 +280,9 @@
             </div>
           </a>
         </div>
+        <div class="center-actions reveal" style="margin-top: var(--space-8);">
+          <button type="button" class="btn btn--ghost" id="btn-more-contents">もっと見る</button>
+        </div>
       </div>
     </section>
 
@@ -293,12 +295,18 @@
             <p class="section-lead">X（旧Twitter）のDM、またはお問い合わせフォームからお気軽にご連絡ください。</p>
           </div>
           <div class="cta-panel__actions">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScOU0shVfDHxasaDjSHUYt-aoALHnHyKoZicqXyLUZ4l_MkOg/viewform?usp=publish-editor"
+              target="_blank" rel="noopener" class="btn btn--forms">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-mail"></use>
+                <!-- icon is optional, fallback to just text if not found, or maybe just text -->
+              </svg>Google Forms
+            </a>
             <a href="https://x.com/Azuriteeeee" target="_blank" rel="noopener" class="btn btn--primary">
               <svg class="icon" aria-hidden="true">
                 <use href="#i-x"></use>
               </svg>X (Twitter)
             </a>
-            <!-- TODO: Create a proper contact form page if needed, or link to a google form -->
           </div>
         </div>
       </div>
