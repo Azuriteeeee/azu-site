@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="動画編集 - あずらいと / Azurite">
+  <meta property="og:description" content="動画編集について">
+  <meta property="og:image" content="img/GCw48R-m_400x400.jpg">
+  <meta name="description" content="動画編集について">
+  <title>動画編集 - あずらいと / Azurite</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- 新しいCSSアーキテクチャ -->
+  <link rel="stylesheet" href="css/ress.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-logo">
+        <img src="img/GCw48R-m_400x400.jpg" alt="" class="site-logo__img" width="36" height="36" loading="lazy">
+        <span class="site-logo__text">あずらいと</span>
+      </a>
+      <div class="header-actions">
+        <button type="button" class="icon-btn nav-toggle" aria-expanded="false" aria-controls="site-nav"
+          aria-label="メニューを開く">
+          <svg class="icon icon-menu" aria-hidden="true">
+            <use href="#i-menu"></use>
+          </svg>
+          <svg class="icon icon-close" aria-hidden="true">
+            <use href="#i-close"></use>
+          </svg>
+        </button>
+      </div>
+      <nav id="site-nav" class="site-nav">
+        <ul class="site-nav__list">
+          <li><a href="index.html" class="site-nav__link">HOME<small>ホーム</small></a></li>
+          <li><a href="index.html#videos" class="site-nav__link">VIDEOS<small>動画一覧</small></a></li>
+          <li><a href="index.html#about" class="site-nav__link">ABOUT<small>プロフィール</small></a></li>
+          <li><a href="games.html" class="site-nav__link">GAMES<small>やってるゲーム</small></a></li>
+          <li><a href="devices.html" class="site-nav__link">DEVICES<small>使ってるデバイス</small></a></li>
+          <li><a href="videoedit.html" class="site-nav__link" aria-current="page">EDIT<small>動画編集</small></a></li>
+          <li><a href="index.html#contact" class="site-nav__link">CONTACT<small>お仕事・コラボ</small></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero container container--narrow">
+      <h1 class="page-hero__title reveal">Video Editing</h1>
+      <p class="page-hero__lead reveal">テンポ感を重視した、視聴者を飽きさせない動画制作を行っています。<br>これまでに自身で編集した動画一覧と、印象的な編集シーンの抜粋をご紹介します。</p>
+      <ul class="breadcrumb reveal">
+        <li><a href="index.html">HOME</a></li>
+        <li>Video Editing</li>
+      </ul>
+    </div>
+
+    <!-- Contact CTA -->
+    <section class="section section--alt">
+      <div class="container container--narrow">
+        <div class="cta-panel reveal">
+          <div>
+            <h2 class="section-title" style="font-size: var(--fs-xl);">お仕事やコラボのご依頼</h2>
+            <p class="section-lead">動画編集のご依頼も随時受け付けております。<br>X（旧Twitter）のDMからお気軽にご連絡ください。</p>
+          </div>
+          <div class="cta-panel__actions">
+            <a href="https://x.com/Azuriteeeee" target="_blank" rel="noopener" class="btn btn--primary">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-x"></use>
+              </svg>X (Twitter)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Portfolio</span>
+          <h2 class="section-title" style="font-size: var(--fs-xl);">編集した動画一覧</h2>
+          <p class="section-lead">
+            YouTubeチャンネルの動画はすべて自身で企画と編集、サムネイルを手掛けています。<br>ジャンルに合わせたテンポ感やテロップ配置など、実際の編集スタイルはこちらからご覧ください。</p>
+        </div>
+        <div id="video-tabs" class="reveal">
+          <!-- js/script.js がタブを生成します-->
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container container--narrow">
+        <div class="section-head reveal">
+          <span class="eyebrow">Scenes</span>
+          <h2 class="section-title" style="font-size: var(--fs-xl);">編集シーン抜粋</h2>
+          <p class="section-lead">実際の動画内から切り抜いたワンシーンのご紹介です。（画像クリックで拡大表示）</p>
+        </div>
+
+        <div class="grid grid--3">
+
+          <!-- シーン 1 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 031451.png" data-caption="タイヤを大量に増殖させたとき">
+              <img src="img/スクリーンショット 2026-09-21 031451.png" alt="タイヤを大量に増殖させたとき" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral"
+                style="width: fit-content; margin-bottom: var(--space-2)">Fortnite</span>
+              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">タイヤを大量に増殖させたとき</p>
+            </div>
+          </div>
+
+          <!-- シーン 2 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 031631.png" data-caption="何もできずに死亡したとき">
+              <img src="img/スクリーンショット 2026-09-21 031631.png" alt="何もできずに死亡したとき" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral"
+                style="width: fit-content; margin-bottom: var(--space-2)">Fortnite</span>
+              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">何もできずに死亡したとき</p>
+            </div>
+          </div>
+
+          <!-- シーン 3 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 031745.png" data-caption="全ロス後の様子">
+              <img src="img/スクリーンショット 2026-09-21 031745.png" alt="全ロス後の様子" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral"
+                style="width: fit-content; margin-bottom: var(--space-2)">Minecraft</span>
+              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">全ロス後の様子</p>
+            </div>
+          </div>
+
+          <!-- シーン 4 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 031817.png" data-caption="VICTORY ROYALE!">
+              <img src="img/スクリーンショット 2026-09-21 031817.png" alt="VICTORY ROYALE!" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral"
+                style="width: fit-content; margin-bottom: var(--space-2)">Fortnite</span>
+              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">VICTORY ROYALE!</p>
+            </div>
+          </div>
+
+          <!-- シーン 5 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 031904.png" data-caption="音ブロック演奏の様子">
+              <img src="img/スクリーンショット 2026-09-21 031904.png" alt="音ブロック演奏の様子" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral"
+                style="width: fit-content; margin-bottom: var(--space-2)">Minecraft</span>
+              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">音ブロック演奏の様子</p>
+            </div>
+          </div>
+
+          <!-- シーン 6 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 032019.png" data-caption="合成音声によるアプデ情報解説">
+              <img src="img/スクリーンショット 2026-09-21 032019.png" alt="合成音声によるアプデ情報解説" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral"
+                style="width: fit-content; margin-bottom: var(--space-2)">Fortnite</span>
+              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">合成音声によるアプデ情報解説</p>
+            </div>
+          </div>
+
+          <!-- シーン 7 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 032202.png"
+              data-caption="1話を柱の建築だけに使った時の様子">
+              <img src="img/スクリーンショット 2026-09-21 032202.png" alt="1話を柱の建築だけに使った時の様子" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral"
+                style="width: fit-content; margin-bottom: var(--space-2)">Minecraft</span>
+              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">1話を柱の建築だけに使った時の様子</p>
+            </div>
+          </div>
+
+          <!-- シーン 8 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 032320.png"
+              data-caption="ゲーミングキーボードの案件をいただいた時の動画">
+              <img src="img/スクリーンショット 2026-09-21 032320.png" alt="ゲーミングキーボードの案件をいただいた時の動画" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral"
+                style="width: fit-content; margin-bottom: var(--space-2)">Promotion</span>
+              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">
+                ゲーミングキーボードの案件をいただいた時の動画</p>
+            </div>
+          </div>
+
+          <!-- シーン 9 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 032418.png"
+              data-caption="ファストフード店を運営している様子">
+              <img src="img/スクリーンショット 2026-09-21 032418.png" alt="ファストフード店を運営している様子" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral" style="width: fit-content; margin-bottom: var(--space-2)">Fast Food
+                Simulator</span>
+              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">ファストフード店を運営している様子</p>
+            </div>
+          </div>
+
+          <!-- シーン 10 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 033018.png"
+              data-caption="マウスグリップの案件をいただいた時の動画">
+              <img src="img/スクリーンショット 2026-09-21 033018.png" alt="マウスグリップの案件をいただいた時の動画" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral"
+                style="width: fit-content; margin-bottom: var(--space-2)">Fortnite</span>
+              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">マウスグリップの案件をいただいた時の動画
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a href="index.html" class="site-logo">
+            <img src="img/GCw48R-m_400x400.jpg" alt="" class="site-logo__img" width="32" height="32" loading="lazy">
+            <span class="site-logo__text">あずらいと</span>
+          </a>
+          <p class="site-footer__desc">ゲーム実況・動画クリエイター</p>
+        </div>
+        <div>
+          <h3 class="site-footer__heading">Contents</h3>
+          <ul class="site-footer__links">
+            <li><a href="games.html">Games</a></li>
+            <li><a href="devices.html">Devices</a></li>
+            <li><a href="videoedit.html">Video Editing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="site-footer__heading">Social</h3>
+          <ul class="site-footer__links">
+            <li><a href="https://www.youtube.com/@AzuriteGG" target="_blank" rel="noopener"><svg class="icon"
+                  aria-hidden="true">
+                  <use href="#i-youtube"></use>
+                </svg>YouTube</a></li>
+            <li><a href="https://x.com/Azuriteeeee" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true">
+                  <use href="#i-x"></use>
+                </svg>X (Twitter)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-year></span> Azurite. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="ページトップへ戻る">
+    <svg class="icon" aria-hidden="true">
+      <use href="#i-arrow-up"></use>
+    </svg>
+  </button>
+
+  <!-- Site Data (動画一覧データ) -->
+  <script src="js/site-data.js"></script>
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

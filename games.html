@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ゲーム - あずらいと / Azurite">
+  <meta property="og:description" content="あずらいとがプレイしているゲームや過去に楽しかったゲームの紹介">
+  <meta property="og:image" content="img/GCw48R-m_400x400.jpg">
+  <meta name="description" content="あずらいとがプレイしているゲームや過去に楽しかったゲームの紹介">
+  <title>ゲーム - あずらいと / Azurite</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- 新しいCSSアーキテクチャ -->
+  <link rel="stylesheet" href="css/ress.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-logo">
+        <img src="img/GCw48R-m_400x400.jpg" alt="" class="site-logo__img" width="36" height="36" loading="lazy">
+        <span class="site-logo__text">あずらいと</span>
+      </a>
+      <div class="header-actions">
+        <button type="button" class="icon-btn nav-toggle" aria-expanded="false" aria-controls="site-nav"
+          aria-label="メニューを開く">
+          <svg class="icon icon-menu" aria-hidden="true">
+            <use href="#i-menu"></use>
+          </svg>
+          <svg class="icon icon-close" aria-hidden="true">
+            <use href="#i-close"></use>
+          </svg>
+        </button>
+      </div>
+      <nav id="site-nav" class="site-nav">
+        <ul class="site-nav__list">
+          <li><a href="index.html" class="site-nav__link">HOME<small>ホーム</small></a></li>
+          <li><a href="index.html#videos" class="site-nav__link">VIDEOS<small>動画一覧</small></a></li>
+          <li><a href="index.html#about" class="site-nav__link">ABOUT<small>プロフィール</small></a></li>
+          <li><a href="games.html" class="site-nav__link" aria-current="page">GAMES<small>やってるゲーム</small></a></li>
+          <li><a href="devices.html" class="site-nav__link">DEVICES<small>使ってるデバイス</small></a></li>
+          <li><a href="videoedit.html" class="site-nav__link">EDIT<small>動画編集</small></a></li>
+          <li><a href="index.html#contact" class="site-nav__link">CONTACT<small>お仕事・コラボ</small></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero container container--narrow">
+      <h1 class="page-hero__title reveal">Games</h1>
+      <p class="page-hero__lead reveal">プレイ中のゲームや、過去に楽しかったゲームの紹介</p>
+      <ul class="breadcrumb reveal">
+        <li><a href="index.html">HOME</a></li>
+        <li>Games</li>
+      </ul>
+    </div>
+
+    <section class="section">
+      <div class="container container--narrow">
+
+        <!-- Active Games -->
+        <div class="group reveal">
+          <h2 class="group__title">やってるゲーム <span class="group__count">5</span></h2>
+          <div class="entry-list entry-list--2col">
+
+            <div class="entry">
+              <div class="media-grid">
+                <img src="img/fn.webp" alt="Fortnite" loading="lazy">
+              </div>
+              <div class="entry__content">
+                <header class="entry__header">
+                  <h3 class="entry__title">フォートナイト</h3>
+                  <div class="entry__tags">
+                    <span class="badge badge--neutral">バトルロイヤル / TPS</span>
+                  </div>
+                </header>
+                <dl class="data-list data-list--compact">
+                  <div class="data-list__row">
+                    <dt>プレイスタイル</dt>
+                    <dd>ランクマッチやリロード、クリエイティブ。</dd>
+                  </div>
+                  <div class="data-list__row">
+                    <dt>コメント</dt>
+                    <dd>活動の原点となっているメインタイトルです。中学生の頃からプレイを続けており、最もプレイ時間が長く、非常に思い入れの深いゲームです。</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="media-grid">
+                <img src="img/Valorant-Logo-PNG-Photo.png" alt="VALORANT" loading="lazy">
+              </div>
+              <div class="entry__content">
+                <header class="entry__header">
+                  <h3 class="entry__title">VALORANT</h3>
+                  <div class="entry__tags">
+                    <span class="badge badge--neutral">5v5 / FPS</span>
+                  </div>
+                </header>
+                <dl class="data-list data-list--compact">
+                  <div class="data-list__row">
+                    <dt>プレイスタイル</dt>
+                    <dd>コンペティティブ、友達とのフルパ</dd>
+                  </div>
+                  <div class="data-list__row">
+                    <dt>コメント</dt>
+                    <dd>2024年から本格的にプレイを開始。ランクは着々と上がっている(はず)。</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="media-grid">
+                <img src="img/minecraft.png" alt="Minecraft" loading="lazy">
+              </div>
+              <div class="entry__content">
+                <header class="entry__header">
+                  <h3 class="entry__title">マインクラフト</h3>
+                  <div class="entry__tags">
+                    <span class="badge badge--neutral">サンドボックス / サバイバル</span>
+                  </div>
+                </header>
+                <dl class="data-list data-list--compact">
+                  <div class="data-list__row">
+                    <dt>プレイスタイル</dt>
+                    <dd>バニラサバイバル、工業mod、Modパック</dd>
+                  </div>
+                  <div class="data-list__row">
+                    <dt>コメント</dt>
+                    <dd>競技系シューターとは対照的に、まったりと遊べるオープンワールドゲーム。工業modが便利すぎて逆にバニラが不便に感じてしまう。</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="media-grid">
+                <img src="img/com.gryphline.endfield.gp.icon.2025-11-26-18-13-25.png" alt="アークナイツ：エンドフィールド"
+                  loading="lazy">
+              </div>
+              <div class="entry__content">
+                <header class="entry__header">
+                  <h3 class="entry__title">アークナイツ：エンドフィールド</h3>
+                  <div class="entry__tags">
+                    <span class="badge badge--neutral">リアルタイム戦略RPG / 工業</span>
+                  </div>
+                </header>
+                <dl class="data-list data-list--compact">
+                  <div class="data-list__row">
+                    <dt>プレイスタイル</dt>
+                    <dd>ストーリー視聴、キャラ育成、工業ライン作成</dd>
+                  </div>
+                  <div class="data-list__row">
+                    <dt>コメント</dt>
+                    <dd>唯一無二のグラフィックが素晴らしいタイトル。魅力的なキャラクターの追加ペースにガチャ石の供給が追いつきません。集成工業システムでガチャ石を作れるようになりますように。</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="media-grid">
+                <img src="img\38e77e4a5ea1093a0b41f7f583fbfa01.jpg" alt="サイバーパンク2077" loading="lazy">
+              </div>
+              <div class="entry__content">
+                <header class="entry__header">
+                  <h3 class="entry__title">サイバーパンク2077</h3>
+                  <div class="entry__tags">
+                    <span class="badge badge--neutral">オープンワールド / アクションRPG</span>
+                  </div>
+                </header>
+                <dl class="data-list data-list--compact">
+                  <div class="data-list__row">
+                    <dt>プレイスタイル</dt>
+                    <dd>ストーリー視聴、クエスト消化</dd>
+                  </div>
+                  <div class="data-list__row">
+                    <dt>コメント</dt>
+                    <dd>アニメが面白かったのでSteamのセール中に購入。自由度がとても高く、車やバイクでナイトシティーを駆け回るのが楽しい。</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Favorite Games -->
+        <div class="group reveal">
+          <h2 class="group__title">楽しかったゲーム <span class="group__count">9</span></h2>
+          <div class="entry-list entry-list--2col">
+
+            <div class="entry">
+              <div class="media-grid">
+                <img src="img\satisfactory_icon_by_ryangl80_djn0gw3-fullview.png" alt="Satisfactory" loading="lazy">
+              </div>
+              <div class="entry__content">
+                <header class="entry__header">
+                  <h3 class="entry__title">Satisfactory</h3>
+                  <div class="entry__tags">
+                    <span class="badge badge--neutral">工業シミュレーション</span>
+                  </div>
+                </header>
+                <dl class="data-list data-list--compact">
+                  <div class="data-list__row">
+                    <dt>プレイスタイル</dt>
+                    <dd>工業ラインの作成、敵対生物の駆除</dd>
+                  </div>
+                  <div class="data-list__row">
+                    <dt>コメント</dt>
+                    <dd>がっつり工業をしたい人におすすめの工業ゲー。コンテンツが豊富と絶妙なゲームバランスにより、プレイの手を止めることはできません。</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="media-grid">
+                <img src="img\Fast-Food-Simulator-icon.webp" alt="Fast Food Simulator" loading="lazy">
+              </div>
+              <div class="entry__content">
+                <header class="entry__header">
+                  <h3 class="entry__title">Fast Food Simulator</h3>
+                  <div class="entry__tags">
+                    <span class="badge badge--neutral">お店経営 / シミュレーション</span>
+                  </div>
+                </header>
+                <dl class="data-list data-list--compact">
+                  <div class="data-list__row">
+                    <dt>プレイスタイル</dt>
+                    <dd>ファストフード店の運営</dd>
+                  </div>
+                  <div class="data-list__row">
+                    <dt>コメント</dt>
+                    <dd>ファストフード店の店長となり、お客さんが注文したバーガーやサイドメニューを作り提供します。難易度を選ぶことができ、最高難易度は本当に忙しいです。マルチプレイに対応しています。</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="media-grid">
+                <img src="img\unnamed.png" alt="GOD FIELD" loading="lazy">
+              </div>
+              <div class="entry__content">
+                <header class="entry__header">
+                  <h3 class="entry__title">GOD FIELD</h3>
+                  <div class="entry__tags">
+                    <span class="badge badge--neutral">カードバトルゲーム</span>
+                  </div>
+                </header>
+                <dl class="data-list data-list--compact">
+                  <div class="data-list__row">
+                    <dt>プレイスタイル</dt>
+                    <dd>マルチプレイ</dd>
+                  </div>
+                  <div class="data-list__row">
+                    <dt>コメント</dt>
+                    <dd>ルールが分かりやすいカードバトルゲーム。天国病になっている時のハラハラ感はたまらない。大人数でやると暇な時間が多くなってしまう。</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="media-grid">
+                <img src="img\7fb45cabde044f97a1402d279d8d0961.jpg" alt="プロジェクトセカイ カラフルステージ! feat. 初音ミク" loading="lazy">
+              </div>
+              <div class="entry__content">
+                <header class="entry__header">
+                  <h3 class="entry__title">プロジェクトセカイ カラフルステージ! feat. 初音ミク</h3>
+                  <div class="entry__tags">
+                    <span class="badge badge--neutral">リズムゲーム</span>
+                  </div>
+                </header>
+                <dl class="data-list data-list--compact">
+                  <div class="data-list__row">
+                    <dt>プレイスタイル</dt>
+                    <dd>楽曲のプレイ、キャラクター育成、ストーリー視聴</dd>
+                  </div>
+                  <div class="data-list__row">
+                    <dt>コメント</dt>
+                    <dd>上から降ってくるノーツを曲のリズムに合わせてタップするゲーム。ボーカロイドが好きな人は是非やってほしいゲーム。120Hzでやりたい。</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="title-card" style="--tc-hue: 120;">
+                <span class="title-card__text">Supermarket<br>Together</span>
+              </div>
+              <div class="entry__content">
+                <header class="entry__header">
+                  <h3 class="entry__title">Supermarket Together</h3>
+                  <div class="entry__tags">
+                    <span class="badge badge--neutral">お店経営 / シミュレーション</span>
+                  </div>
+                </header>
+                <dl class="data-list data-list--compact">
+                  <div class="data-list__row">
+                    <dt>プレイスタイル</dt>
+                    <dd>街のスーパーの店長となり、在庫補充や陳列、値段設定を行う。店内装飾のバリエーションが豊富。マルチプレイが可能。</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="media-grid">
+                <img src="img\logo-apex-legends_1920x1080_3031.jpg" alt="APEX LEGENDS" loading="lazy">
+              </div>
+              <div class="entry__content">
+                <header class="entry__header">
+                  <h3 class="entry__title">APEX LEGENDS</h3>
+                  <div class="entry__tags">
+                    <span class="badge badge--neutral">バトルロイヤル / FPS</span>
+                  </div>
+                </header>
+                <dl class="data-list data-list--compact">
+                  <div class="data-list__row">
+                    <dt>プレイスタイル</dt>
+                    <dd>カジュアル、ランク</dd>
+                  </div>
+                  <div class="data-list__row">
+                    <dt>コメント</dt>
+                    <dd>対面のスピード感が超速い。2026年にたまたまダイヤに到達。</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="media-grid">
+                <img src="img\2207104.webp" alt="AMONG US" loading="lazy">
+              </div>
+              <div class="entry__content">
+                <header class="entry__header">
+                  <h3 class="entry__title">AMONG US</h3>
+                  <div class="entry__tags">
+                    <span class="badge badge--neutral">オンラインSF殺人ミステリー</span>
+                  </div>
+                </header>
+                <dl class="data-list data-list--compact">
+                  <div class="data-list__row">
+                    <dt>プレイスタイル</dt>
+                    <dd>知り合いだけでマルチ</dd>
+                  </div>
+                  <div class="data-list__row">
+                    <dt>コメント</dt>
+                    <dd>人をだますのは難しい。</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="media-grid">
+                <img src="img\sts2_logo_website_hu38b4933139f6d56476527e78f843753b_278792_640x640_fit_lanczos_3.png"
+                  alt="slaythespire 2" loading="lazy">
+              </div>
+              <div class="entry__content">
+                <header class="entry__header">
+                  <h3 class="entry__title">Slay the Spire 2</h3>
+                  <div class="entry__tags">
+                    <span class="badge badge--neutral">カードバトルゲーム</span>
+                  </div>
+                </header>
+                <dl class="data-list data-list--compact">
+                  <div class="data-list__row">
+                    <dt>プレイスタイル</dt>
+                    <dd>マルチプレイ</dd>
+                  </div>
+                  <div class="data-list__row">
+                    <dt>コメント</dt>
+                    <dd>やりたいことができるデッキになった時は本当に楽しい。？から敵が出てくる可能性は絶対に10%ではない。</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="entry">
+              <div class="media-grid">
+                <img src="img\OIP (1).webp" alt="Backrooms: Escape Together" loading="lazy">
+              </div>
+              <div class="entry__content">
+                <header class="entry__header">
+                  <h3 class="entry__title">Backrooms: Escape Together</h3>
+                  <div class="entry__tags">
+                    <span class="badge badge--neutral">協力型サバイバルホラー</span>
+                  </div>
+                </header>
+                <dl class="data-list data-list--compact">
+                  <div class="data-list__row">
+                    <dt>プレイスタイル</dt>
+                    <dd>マルチプレイ</dd>
+                  </div>
+                  <div class="data-list__row">
+                    <dt>コメント</dt>
+                    <dd>夢の中のような世界で歩き回るゲーム。雰囲気で怖がらせてくる。</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a href="index.html" class="site-logo">
+            <img src="img/GCw48R-m_400x400.jpg" alt="" class="site-logo__img" width="32" height="32" loading="lazy">
+            <span class="site-logo__text">あずらいと</span>
+          </a>
+          <p class="site-footer__desc">ゲーム実況・動画クリエイター</p>
+        </div>
+        <div>
+          <h3 class="site-footer__heading">Contents</h3>
+          <ul class="site-footer__links">
+            <li><a href="games.html">Games</a></li>
+            <li><a href="devices.html">Devices</a></li>
+            <li><a href="videoedit.html">Video Editing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="site-footer__heading">Social</h3>
+          <ul class="site-footer__links">
+            <li><a href="https://www.youtube.com/@AzuriteGG" target="_blank" rel="noopener"><svg class="icon"
+                  aria-hidden="true">
+                  <use href="#i-youtube"></use>
+                </svg>YouTube</a></li>
+            <li><a href="https://x.com/Azuriteeeee" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true">
+                  <use href="#i-x"></use>
+                </svg>X (Twitter)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-year></span> Azurite. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="ページトップへ戻る">
+    <svg class="icon" aria-hidden="true">
+      <use href="#i-arrow-up"></use>
+    </svg>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

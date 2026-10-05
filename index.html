@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="あずらいと / Azurite">
+  <meta property="og:description" content="ゲーム実況者「あずらいと」の公式サイト。フォートナイトを中心に動画投稿・配信中！">
+  <meta property="og:image" content="img/GCw48R-m_400x400.jpg">
+  <meta name="description" content="ゲーム実況者「あずらいと」の公式サイト。フォートナイトを中心に動画投稿・配信中！">
+  <title>あずらいと / Azurite - Official Website</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- CSSアーキテクチャ -->
+  <link rel="stylesheet" href="css/ress.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="#" class="site-logo">
+        <img src="img/GCw48R-m_400x400.jpg" alt="" class="site-logo__img" width="36" height="36" loading="lazy">
+        <span class="site-logo__text">あずらいと</span>
+      </a>
+      <div class="header-actions">
+        <button type="button" class="icon-btn nav-toggle" aria-expanded="false" aria-controls="site-nav"
+          aria-label="メニューを開く">
+          <svg class="icon icon-menu" aria-hidden="true">
+            <use href="#i-menu"></use>
+          </svg>
+          <svg class="icon icon-close" aria-hidden="true">
+            <use href="#i-close"></use>
+          </svg>
+        </button>
+      </div>
+      <nav id="site-nav" class="site-nav">
+        <ul class="site-nav__list">
+          <li><a href="#" class="site-nav__link" aria-current="page">HOME<small>ホーム</small></a></li>
+          <li><a href="#videos" class="site-nav__link">VIDEOS<small>動画一覧</small></a></li>
+          <li><a href="#about" class="site-nav__link">ABOUT<small>プロフィール</small></a></li>
+          <li><a href="games.html" class="site-nav__link">GAMES<small>やってるゲーム</small></a></li>
+          <li><a href="devices.html" class="site-nav__link">DEVICES<small>使ってるデバイス</small></a></li>
+          <li><a href="videoedit.html" class="site-nav__link">EDIT<small>動画編集</small></a></li>
+          <li><a href="#contact" class="site-nav__link">CONTACT<small>お仕事・コラボ</small></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <div class="hero__status">
+            <span class="badge badge--live">LIVE / VIDEO EDITOR</span>
+          </div>
+          <h1 class="hero__title" style="word-break: keep-all; overflow-wrap: anywhere;">
+            ゲーム実況<br>
+            &動画編集<span class="hero__title-en">AZURITE</span>
+          </h1>
+          <p class="hero__tagline">
+            「フォートナイト」を中心に配信・動画投稿中。<br>
+            視聴者の皆さんと楽しめるコンテンツをお届けします。
+          </p>
+          <div class="hero__actions">
+            <a href="https://www.youtube.com/@AzuriteGG" target="_blank" rel="noopener"
+              class="btn btn--primary btn--lg">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-youtube"></use>
+              </svg>チャンネルを見る
+            </a>
+            <a href="#about" class="btn btn--ghost btn--lg">プロフィール</a>
+          </div>
+          <div class="hero__stats stat-list">
+            <div class="stat">
+              <span class="stat__label"><svg class="icon" aria-hidden="true">
+                  <use href="#i-users"></use>
+                </svg>登録者数</span>
+              <p class="stat__value">6,000<small>+</small></p>
+            </div>
+            <div class="stat">
+              <span class="stat__label"><svg class="icon" aria-hidden="true">
+                  <use href="#i-eye"></use>
+                </svg>総再生回数</span>
+              <p class="stat__value">250万<small>+</small></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="hero__ring"></div>
+          <div class="hero__ring hero__ring--inner"></div>
+          <img src="img/GCw48R-m_400x400.jpg" alt="あずらいと" class="hero__avatar" fetchpriority="high">
+
+          <div class="hero__float hero__float--1">
+            <img src="img/fn.webp" alt=""> Fortnite
+          </div>
+          <div class="hero__float hero__float--2">
+            <img src="img/Valorant-Logo-PNG-Photo.png" alt=""> Valorant
+          </div>
+          <div class="hero__float hero__float--3">
+            <img src="img/minecraft.png" alt=""> Minecraft
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule -->
+    <section id="schedule-section" class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Schedule</span>
+          <h2 class="section-title" style="font-size: var(--fs-xl);">今週のスケジュール</h2>
+          <p class="section-lead" id="schedule-note">今週の配信予定です（変更になる場合があります！）</p>
+        </div>
+        <ul id="schedule" class="schedule reveal">
+          <!-- js/script.js がここを埋めまぁE-->
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pinned Video -->
+    <section id="videos" class="section">
+      <div class="container">
+        <div class="pinned reveal">
+          <div class="pinned__player">
+            <button class="embed-lite" type="button" data-video-id="mC4cfe-H-co"
+              data-video-title="【フォートナイト成長記録】SwitchからPCへ移行後8か月の成果は？" aria-label="動画を再生：SwitchからPCへ移行後8か月の成果">
+              <img src="https://i.ytimg.com/vi/mC4cfe-H-co/maxresdefault.jpg" alt="SwitchからPCへ移行後8か月の成果 サムネイル"
+                loading="lazy">
+              <span class="play-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-play"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+          <div class="pinned__content">
+            <span class="badge badge--accent">初見さんにおすすめ</span>
+            <h3 class="pinned__title">SwitchからPCへ移行後8か月の成果</h3>
+            <ul class="pinned__points">
+              <li>
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-check"></use>
+                </svg>
+                再生回数200万回突破の代表作！
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-check"></use>
+                </svg>
+                PC移行から成長過程をまとめました
+              </li>
+              <li>
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-check"></use>
+                </svg>
+                コメントにも返信しています！
+              </li>
+            </ul>
+            <a href="https://www.youtube.com/@AzuriteGG/videos" target="_blank" rel="noopener noreferrer"
+              class="btn btn--primary">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-youtube"></use>
+              </svg>
+              もっと動画を見る
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Videos Tabs -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Videos</span>
+          <h2 class="section-title" style="font-size: var(--fs-xl);">動画一覧</h2>
+        </div>
+        <div id="video-tabs" class="reveal">
+          <!-- js/script.js がタブを生成しました-->
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section--alt">
+      <div class="container container--narrow">
+        <div class="section-head reveal">
+          <span class="eyebrow">About</span>
+          <h2 class="section-title" style="font-size: var(--fs-xl);">プロフィール</h2>
+        </div>
+        <div class="profile reveal">
+          <div class="profile__info">
+            <div class="profile__intro">
+              <img src="img/GCw48R-m_400x400.jpg" alt="" class="profile__avatar" loading="lazy">
+              <div>
+                <h3 class="profile__name">あずらいと</h3>
+                <p class="profile__role">実況者 / 動画編集者</p>
+              </div>
+            </div>
+            <p class="profile__bio">
+              「フォートナイト」「VALORANT」「マインクラフト」を中心に動画編集、動画投稿しています！<br>
+              ゲームの上達過程や単発ゲーム実況などのコンテンツを作っています！<br>
+              ライブ配信も行っているので、ぜひ見に来てください！</p>
+          </div>
+          <div class="profile__history">
+            <h4 class="group__title" style="font-size: var(--fs-md); margin-bottom: var(--space-4);">活動履歴</h4>
+            <ul class="timeline">
+              <li class="timeline__item"><span class="timeline__text">Fortnite成長記録 200万回再生</span><span
+                  class="timeline__date">2025.09</span></li>
+              <li class="timeline__item"><span class="timeline__text">登録者数5,000人達成</span><span
+                  class="timeline__date">2024.01</span></li>
+              <li class="timeline__item"><span class="timeline__text">総再生回数100万回突破</span><span
+                  class="timeline__date">2022.11</span></li>
+              <li class="timeline__item"><span class="timeline__text">登録者数1,000人達成</span><span
+                  class="timeline__date">2022.01</span></li>
+              <li class="timeline__item"><span class="timeline__text">活動開始</span><span
+                  class="timeline__date">2021.03</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contents Links -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Contents</span>
+          <h2 class="section-title" style="font-size: var(--fs-xl);">その他コンテンツ</h2>
+        </div>
+        <div class="grid grid--3 reveal">
+          <a href="games.html" class="card card--link">
+            <div class="card__media">
+              <img src="img\タイトルなし.png" alt="プレイ中のゲーム" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Games</h3>
+              <p class="card__text">よくプレイするゲームや、過去に楽しかったゲームの紹介</p>
+              <span class="card__arrow"><svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow-right"></use>
+                </svg></span>
+            </div>
+          </a>
+          <a href="devices.html" class="card card--link">
+            <div class="card__media">
+              <img src="img/デバイス.png" alt="使用デバイス" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Devices & Specs</h3>
+              <p class="card__text">使用しているデバイスやPCスペックについて</p>
+              <span class="card__arrow"><svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow-right"></use>
+                </svg></span>
+            </div>
+          </a>
+          <a href="videoedit.html" class="card card--link">
+            <div class="card__media">
+              <img src="img/スクリーンショット 2026-09-21 040148.png" alt="動画編集" loading="lazy">
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Video Editing</h3>
+              <p class="card__text">動画編集ソフトや環境について</p>
+              <span class="card__arrow"><svg class="icon" aria-hidden="true">
+                  <use href="#i-arrow-right"></use>
+                </svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section id="contact" class="section section--alt">
+      <div class="container container--narrow">
+        <div class="cta-panel reveal">
+          <div>
+            <h2 class="section-title" style="font-size: var(--fs-xl);">お仕事やコラボのご依頼</h2>
+            <p class="section-lead">X（旧Twitter）のDM、またはお問い合わせフォームからお気軽にご連絡ください。</p>
+          </div>
+          <div class="cta-panel__actions">
+            <a href="https://x.com/Azuriteeeee" target="_blank" rel="noopener" class="btn btn--primary">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-x"></use>
+              </svg>X (Twitter)
+            </a>
+            <!-- TODO: Create a proper contact form page if needed, or link to a google form -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <a href="index.html" class="site-logo">
+            <img src="img/GCw48R-m_400x400.jpg" alt="" class="site-logo__img" width="32" height="32" loading="lazy">
+            <span class="site-logo__text">あずらいと</span>
+          </a>
+          <p class="site-footer__desc">ゲーム実況・動画クリエイター</p>
+        </div>
+        <div>
+          <h3 class="site-footer__heading">Contents</h3>
+          <ul class="site-footer__links">
+            <li><a href="games.html">Games</a></li>
+            <li><a href="devices.html">Devices</a></li>
+            <li><a href="videoedit.html">Video Editing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="site-footer__heading">Social</h3>
+          <ul class="site-footer__links">
+            <li><a href="https://www.youtube.com/@AzuriteGG" target="_blank" rel="noopener"><svg class="icon"
+                  aria-hidden="true">
+                  <use href="#i-youtube"></use>
+                </svg>YouTube</a></li>
+            <li><a href="https://x.com/Azuriteeeee" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true">
+                  <use href="#i-x"></use>
+                </svg>X (Twitter)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-year></span> Azurite. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="ページトップへ戻る">
+    <svg class=" icon" aria-hidden="true">
+      <use href="#i-arrow-up"></use>
+    </svg>
+  </button>
+
+  <!-- Site Data (動画一覧や配信スケジュールのデータ) -->
+  <script src="js/site-data.js"></script>
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>

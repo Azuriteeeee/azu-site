@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Design Tokens — あずらいと / Azurite
+   --------------------------------------------------------------------------
+   サイト全体の「見た目の値」はすべてここで一元管理します。
+   コンポーネント側では生の値（#fff / 16px など）を書かず、必ず var(--*) を参照してください。
+
+   Breakpoints（CSS変数はメディアクエリに使えないため、規約として固定）
+     Mobile  :  ~ 640px   … ベース（モバイルファースト）
+     Tablet  :  641px ~ 1024px  → @media (min-width: 641px)
+     Desktop :  1025px ~        → @media (min-width: 1025px)
+   ========================================================================== */
+
+:root {
+  /* ---------- Color: Primitive palette ---------- */
+  /* Azurite（藍銅鉱）をモチーフにしたブルー系 */
+  --azure-50:  hsl(210 100% 97%);
+  --azure-100: hsl(211 96% 92%);
+  --azure-200: hsl(212 94% 83%);
+  --azure-300: hsl(213 92% 72%);
+  --azure-400: hsl(214 90% 62%);
+  --azure-500: hsl(218 86% 54%);
+  --azure-600: hsl(222 80% 46%);
+  --azure-700: hsl(225 74% 38%);
+  --azure-800: hsl(228 68% 26%);
+  --azure-900: hsl(230 60% 16%);
+
+  /* アクセント：アイコンのオレンジ（補色で CTA を引き立てる） */
+  --ember-300: hsl(28 100% 70%);
+  --ember-400: hsl(24 98% 62%);
+  --ember-500: hsl(18 92% 55%);
+
+  /* ハイライト：シアン（グラデーション・フォーカスリング） */
+  --cyan-300: hsl(188 95% 68%);
+  --cyan-400: hsl(190 92% 55%);
+
+  /* ニュートラル（青みを帯びたグレー） */
+  --ink-0:   hsl(220 30% 100%);
+  --ink-50:  hsl(220 33% 97%);
+  --ink-100: hsl(220 25% 93%);
+  --ink-200: hsl(222 20% 84%);
+  --ink-300: hsl(223 16% 70%);
+  --ink-400: hsl(224 12% 55%);
+  --ink-500: hsl(225 12% 42%);
+  --ink-600: hsl(226 16% 30%);
+  --ink-700: hsl(228 22% 20%);
+  --ink-800: hsl(230 28% 13%);
+  --ink-850: hsl(231 32% 10%);
+  --ink-900: hsl(232 36% 7%);
+
+  /* ブランド固有色 */
+  --brand-youtube: hsl(0 100% 50%);
+  --brand-x:       hsl(0 0% 100%);
+  --brand-twitch:  hsl(264 100% 64%);
+  --brand-tiktok:  hsl(176 100% 44%);
+  --brand-insta:   hsl(330 80% 58%);
+  --brand-booth:   hsl(352 90% 60%);
+
+  /* ---------- Color: Semantic (Light theme = default) ---------- */
+  --color-bg:            var(--ink-50);
+  --color-bg-elevated:   var(--ink-0);
+  --color-surface:       hsl(0 0% 100% / 0.82);
+  --color-surface-solid: var(--ink-0);
+  --color-surface-hover: hsl(0 0% 100% / 1);
+  --color-border:        hsl(224 30% 40% / 0.14);
+  --color-border-strong: hsl(220 70% 50% / 0.3);
+
+  --color-text:          var(--ink-800);
+  --color-text-muted:    var(--ink-500);
+  --color-text-subtle:   var(--ink-400);
+  --color-text-inverse:  var(--ink-0);
+
+  --color-primary:       var(--azure-600);
+  --color-primary-hover: var(--azure-700);
+  --color-primary-soft:  hsl(222 80% 46% / 0.1);
+  --color-on-primary:    var(--ink-0);
+  --color-accent:        var(--ember-500);
+  --color-accent-hover:  var(--ember-400);
+  --color-accent-soft:   hsl(18 92% 55% / 0.12);
+  --color-highlight:     var(--azure-500);
+
+  --color-success: hsl(152 64% 50%);
+  --color-danger:  hsl(356 85% 62%);
+  --color-live:    hsl(356 90% 58%);
+
+  --gradient-brand:  linear-gradient(120deg, var(--azure-500) 0%, var(--cyan-400) 100%);
+  --gradient-accent: linear-gradient(120deg, var(--ember-500) 0%, var(--ember-300) 100%);
+  --gradient-text: linear-gradient(100deg, var(--ink-800) 10%, var(--azure-600) 60%, var(--azure-400) 100%);
+  --gradient-hero:
+    radial-gradient(60% 60% at 15% 10%, hsl(214 95% 65% / 0.28) 0%, transparent 70%),
+    radial-gradient(50% 50% at 90% 20%, hsl(190 95% 55% / 0.2) 0%, transparent 70%),
+    radial-gradient(45% 55% at 70% 100%, hsl(24 98% 62% / 0.16) 0%, transparent 70%);
+  --grid-line: hsl(222 60% 40% / 0.06);
+
+  /* ---------- Typography ---------- */
+  --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, system-ui, sans-serif;
+  --font-display: "Outfit", "Noto Sans JP", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Consolas, monospace;
+
+  /* 流体タイポグラフィ（375px → 1280px の間でなめらかに変化） */
+  --fs-2xs: 0.6875rem;                                   /* 11px */
+  --fs-xs:  0.75rem;                                     /* 12px */
+  --fs-sm:  0.875rem;                                    /* 14px */
+  --fs-md:  1rem;                                        /* 16px */
+  --fs-lg:  clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);   /* 17-19px */
+  --fs-xl:  clamp(1.1875rem, 1.05rem + 0.6vw, 1.5rem);   /* 19-24px */
+  --fs-2xl: clamp(1.5rem, 1.2rem + 1.2vw, 2.125rem);     /* 24-34px */
+  --fs-3xl: clamp(1.875rem, 1.3rem + 2.4vw, 3rem);       /* 30-48px */
+  --fs-4xl: clamp(2rem, 8.5vw, 4rem);            /* 32-64px */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  --lh-tight: 1.2;
+  --lh-snug: 1.45;
+  --lh-base: 1.8;
+
+  --ls-tight: -0.01em;
+  --ls-base: 0.03em;
+  --ls-wide: 0.12em;
+
+  /* ---------- Spacing scale（4px ベース） ---------- */
+  --space-1:  0.25rem;  /*  4px */
+  --space-2:  0.5rem;   /*  8px */
+  --space-3:  0.75rem;  /* 12px */
+  --space-4:  1rem;     /* 16px */
+  --space-5:  1.25rem;  /* 20px */
+  --space-6:  1.5rem;   /* 24px */
+  --space-8:  2rem;     /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+  --space-24: 6rem;     /* 96px */
+
+  --section-space: clamp(var(--space-16), 6vw + 1rem, var(--space-24));
+  --gutter: clamp(var(--space-4), 3vw, var(--space-10));
+
+  /* ---------- Layout ---------- */
+  --container-max: 1200px;
+  --container-narrow: 1200px;
+  --header-h: 64px;
+  --tap-min: 44px;           /* タップ領域の最小サイズ（WCAG 2.5.5） */
+
+  /* ---------- Radius ---------- */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* ---------- Shadow / Glow ---------- */
+  --shadow-sm: 0 1px 2px hsl(225 40% 20% / 0.06);
+  --shadow-md: 0 8px 24px -10px hsl(225 40% 20% / 0.18);
+  --shadow-lg: 0 24px 48px -18px hsl(225 40% 20% / 0.25);
+  --shadow-glow: 0 0 0 1px hsl(222 80% 46% / 0.25), 0 12px 32px -14px hsl(222 80% 46% / 0.4);
+  --shadow-glow-accent: 0 12px 32px -10px hsl(24 98% 55% / 0.6);
+  --focus-ring: 0 0 0 3px var(--color-bg), 0 0 0 5px var(--color-highlight);
+
+  /* ---------- Effects ---------- */
+  --blur-glass: saturate(160%) blur(16px);
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur-base: 250ms;
+  --dur-slow: 500ms;
+
+  /* ---------- Z-index ---------- */
+  --z-base: 1;
+  --z-sticky: 50;
+  --z-header: 100;
+  --z-drawer: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+
+  color-scheme: light;
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+  }
+}
