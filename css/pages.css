@@ -391,7 +391,7 @@
   gap: var(--space-6);
   align-items: center;
   padding: clamp(var(--space-8), 6vw, var(--space-16));
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-bor der-strong);
   border-radius: var(--radius-xl);
   overflow: hidden;
   background:
