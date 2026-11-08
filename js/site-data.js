@@ -3,7 +3,6 @@
    --------------------------------------------------------------------------
    ・videos    : 動画一覧（トップの「VIDEOS」タブ）。category を追加するとタブも自動で増えます
    ・schedule  : 週間配信スケジュール（毎週の定期予定）
-   ※ 「TODO」と書かれた値は仮の内容です。実際の情報に置き換えてください。
    ========================================================================== */
 window.SITE_DATA = {
   channelUrl: "https://www.youtube.com/@AzuriteGG",
@@ -105,7 +104,7 @@ window.SITE_DATA = {
   schedule: {
     // trueにするとスケジュール表を非表示にして、下の noticeHtml を表示します
     useNotice: true,
-    noticeHtml: '最新の配信スケジュールは<a href="https://x.com/Azuriteeeee" target="_blank" rel="noopener" style="text-decoration:underline;">Twitter</a>をご確認ください。',
+    noticeHtml: '最新の配信スケジュールは<a href="https://x.com/Azuriteeeee" target="_blank" rel="noopener">Twitter</a>をご確認ください。',
     note: "予定は変更になる場合があります。最新情報はTwitterをご確認ください。",
 
     // 【手動で日付を変更する場合】

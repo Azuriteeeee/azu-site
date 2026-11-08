@@ -3,12 +3,10 @@
    --------------------------------------------------------------------------
    1. Icons      : SVG アイコンスプライトの注入（全ページ共通・file:// でも動作）
    2. Header     : スクロール時のガラス背景 / ハンバーガーメニュー
-   3. Theme      : ダーク / ライト切替（localStorage に保存）
-   4. UI         : ページトップ / スクロール表示アニメーション / ハッシュタグコピー
-   5. Video      : 動画モーダル / 遅延埋め込み / ジャンル別タブ
-   6. Schedule   : 週間配信スケジュール
-   7. Lightbox   : 画像拡大表示
-   8. Contact    : 問い合わせフォーム（文面生成 → コピー / X / メール）
+   3. UI         : ページトップ / スクロール表示アニメーション
+   4. Video      : 動画モーダル / 遅延埋め込み / ジャンル別タブ
+   5. Schedule   : 週間配信スケジュール
+   6. Lightbox   : 画像拡大表示
    ========================================================================== */
 (function () {
   "use strict";
@@ -41,36 +39,15 @@
   var ICONS = {
     menu: [S, '<path d="M4 7h16M4 12h16M4 17h16"/>'],
     close: [S, '<path d="M18 6 6 18M6 6l12 12"/>'],
-    sun: [S, '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>'],
-    moon: [S, '<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>'],
     play: [F, '<path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14Z"/>'],
     "arrow-up": [S, '<path d="m5 12 7-7 7 7M12 19V5"/>'],
     "arrow-right": [S, '<path d="M5 12h14M12 5l7 7-7 7"/>'],
-    external: [S, '<path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>'],
-    copy: [S, '<rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>'],
     check: [S, '<path d="M20 6 9 17l-5-5"/>'],
     users: [S, '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>'],
     eye: [S, '<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>'],
-    calendar: [S, '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>'],
-    flag: [S, '<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/>'],
     mail: [S, '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/>'],
-    bag: [S, '<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/>'],
-    heart: [S, '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>'],
-    instagram: [S, '<rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/>'],
-    info: [S, '<circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>'],
-    alert: [S, '<path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/>'],
-    gamepad: [S, '<rect x="2" y="6" width="20" height="12" rx="4"/><path d="M6 12h4M8 10v4M15 13h.01M18 11h.01"/>'],
-    star: [S, '<path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/>'],
-    scissors: [S, '<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12"/>'],
-    palette: [S, '<circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.84-.44-1.13-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.56-2.5 5.56-5.55C21.97 6.01 17.46 2 12 2z"/>'],
-    briefcase: [S, '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>'],
-    hash: [S, '<path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/>'],
-    film: [S, '<rect x="2" y="2" width="20" height="20" rx="2.18"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/>'],
-    cpu: [S, '<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/>'],
     youtube: [F, '<path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/>'],
-    x: [F, '<path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z"/>'],
-    twitch: [F, '<path d="M11.57 4.71h1.72v5.15h-1.72zm4.72 0H18v5.15h-1.71zM6 0 1.71 4.29v15.42h5.15V24l4.28-4.29h3.43L22.29 12V0zm14.57 11.14-3.43 3.43h-3.43l-3 3v-3H6.86V1.71h13.71z"/>'],
-    tiktok: [F, '<path d="M12.53.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>']
+    x: [F, '<path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z"/>']
   };
 
   function injectSprite() {
@@ -213,48 +190,6 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
-  var toastTimer;
-  function toast(message) {
-    var el = $(".toast");
-    if (!el) {
-      el = document.createElement("div");
-      el.className = "toast";
-      el.setAttribute("role", "status");
-      el.setAttribute("aria-live", "polite");
-      document.body.appendChild(el);
-    }
-    el.innerHTML = icon("check", "icon--stroke") + "<span>" + esc(message) + "</span>";
-    el.classList.add("is-visible");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () { el.classList.remove("is-visible"); }, 2400);
-  }
-
-  function copyText(text) {
-    if (navigator.clipboard && window.isSecureContext) {
-      return navigator.clipboard.writeText(text);
-    }
-    return new Promise(function (resolve, reject) {
-      var ta = document.createElement("textarea");
-      ta.value = text;
-      ta.setAttribute("readonly", "");
-      ta.style.cssText = "position:fixed;top:0;left:0;opacity:0";
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand("copy") ? resolve() : reject(); } catch (e) { reject(e); }
-      document.body.removeChild(ta);
-    });
-  }
-
-  function initCopy() {
-    document.addEventListener("click", function (e) {
-      var btn = e.target.closest("[data-copy]");
-      if (!btn) return;
-      var text = btn.getAttribute("data-copy");
-      copyText(text).then(function () { toast("「" + text + "」をコピーしました"); },
-        function () { toast("コピーできませんでした"); });
-    });
-  }
-
   function initYear() {
     $$("[data-year]").forEach(function (el) { el.textContent = String(new Date().getFullYear()); });
   }
@@ -352,7 +287,7 @@
     return '<button type="button" class="card card--interactive video-card reveal" data-video-modal="' + esc(v.id) +
       '" data-video-title="' + esc(v.title) + '">' +
       '<span class="card__media">' +
-        '<img src="' + thumb(v.id) + '" alt="" loading="lazy" decoding="async" width="480" height="360">' +
+        '<img src="' + thumb(v.id) + '" alt="' + esc(v.title) + ' サムネイル" loading="lazy" decoding="async" width="480" height="360">' +
         '<span class="play-icon">' + icon("play") + "</span>" +
         (v.label ? '<span class="badge badge--accent">' + esc(v.label) + "</span>" : "") +
       "</span>" +
@@ -389,13 +324,13 @@
 
       var cardsHtml = list.map(function (v, j) {
         var html = videoCardHTML(v);
-        if (j >= perPage) html = html.replace('class="card ', 'style="display:none;" class="card is-hidden ');
+        if (j >= perPage) html = html.replace('class="card ', 'class="card is-hidden ');
         return html;
       }).join("");
 
       var body = '<div class="grid grid--3">' + cardsHtml + "</div>";
       if (list.length > perPage) {
-        body += '<div class="load-more-wrap" style="text-align:center; margin-top: var(--space-8);"><button type="button" class="btn btn--outline btn--load-more">もっと見る</button></div>';
+        body += '<div class="load-more-wrap"><button type="button" class="btn btn--ghost btn--load-more">もっと見る</button></div>';
       }
 
       return '<div role="tabpanel" class="tabs__panel" id="panel-' + c.key + '" aria-labelledby="tab-' + c.key + '"' +
@@ -438,7 +373,6 @@
         var toShow = Array.prototype.slice.call(hiddenCards, 0, perPage);
         
         toShow.forEach(function(card, idx) {
-          card.style.display = ""; // remove inline display:none
           card.classList.remove("is-hidden");
           // 少し遅らせてアニメーションクラスを付与
           setTimeout(function() {
@@ -461,7 +395,7 @@
     if (!host || !DATA.schedule) return;
 
     if (DATA.schedule.useNotice && DATA.schedule.noticeHtml) {
-      host.innerHTML = '<li style="grid-column: 1 / -1; padding: var(--space-8); text-align: center; background: var(--color-surface); border-radius: var(--radius-lg);">' + DATA.schedule.noticeHtml + '</li>';
+      host.innerHTML = '<li class="schedule__notice">' + DATA.schedule.noticeHtml + '</li>';
       var note = $("#schedule-note");
       if (note) note.hidden = true;
       return;
@@ -536,109 +470,6 @@
     });
   }
 
-  /* =========================================================
-     8. Contact form
-     ========================================================= */
-  function initContactForm() {
-    var form = $("#contact-form");
-    if (!form) return;
-    var result = $("#contact-result");
-    var output = $("#contact-output");
-    var mailBtn = $("#contact-mail");
-    var email = form.getAttribute("data-email") || "";
-    if (!email && mailBtn) mailBtn.hidden = true;
-
-    function fieldOf(input) { return input.closest(".field"); }
-    function validate(input) {
-      var ok = input.checkValidity();
-      var f = fieldOf(input);
-      if (f) f.classList.toggle("is-invalid", !ok);
-      input.setAttribute("aria-invalid", String(!ok));
-      return ok;
-    }
-
-    $$("input, select, textarea", form).forEach(function (el) {
-      el.addEventListener("blur", function () { if (el.value) validate(el); });
-      el.addEventListener("input", function () {
-        var f = fieldOf(el);
-        if (f && f.classList.contains("is-invalid")) validate(el);
-      });
-    });
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var fields = $$("[required]", form);
-      var firstInvalid = null;
-      fields.forEach(function (el) { if (!validate(el) && !firstInvalid) firstInvalid = el; });
-      if (firstInvalid) { firstInvalid.focus(); return; }
-
-      var fd = new FormData(form);
-      var text =
-        "【お問い合わせ】" + (fd.get("type") || "") + "\n" +
-        "お名前／団体名：" + (fd.get("name") || "") + "\n" +
-        (fd.get("company") ? "会社・チャンネル：" + fd.get("company") + "\n" : "") +
-        "連絡先：" + (fd.get("reply") || "") + "\n" +
-        (fd.get("deadline") ? "希望時期：" + fd.get("deadline") + "\n" : "") +
-        (fd.get("budget") ? "ご予算：" + fd.get("budget") + "\n" : "") +
-        "\n" + (fd.get("message") || "");
-
-      output.textContent = text;
-      result.hidden = false;
-      if (mailBtn && email) {
-        mailBtn.href = "mailto:" + email + "?subject=" + encodeURIComponent("【お問い合わせ】" + (fd.get("type") || "")) +
-          "&body=" + encodeURIComponent(text);
-      }
-      result.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
-    });
-
-    var copyBtn = $("#contact-copy");
-    if (copyBtn) {
-      copyBtn.addEventListener("click", function () {
-        copyText(output.textContent).then(function () {
-          toast("文面をコピーしました。X の DM に貼り付けてください");
-          var url = copyBtn.getAttribute("data-open");
-          if (url) window.open(url, "_blank", "noopener");
-        }, function () { toast("コピーできませんでした。手動で選択してください"); });
-      });
-    }
-  }
-
-  /* ---------- contents more ---------- */
-  function initContentsMore() {
-    var grid = $(".contents-grid");
-    var btn = $("#btn-more-contents");
-    if (!grid || !btn) return;
-    var items = Array.prototype.slice.call(grid.children);
-    var isExpanded = false;
-    var limit = window.innerWidth <= 768 ? 3 : 4;
-
-    function update() {
-      items.forEach(function (el, i) {
-        el.style.display = (isExpanded || i < limit) ? "" : "none";
-      });
-      btn.textContent = isExpanded ? "閉じる" : "もっと見る";
-      btn.style.display = items.length <= limit ? "none" : "";
-    }
-
-    update();
-    btn.addEventListener("click", function () {
-      isExpanded = !isExpanded;
-      update();
-    });
-
-    var timer;
-    window.addEventListener("resize", function () {
-      clearTimeout(timer);
-      timer = setTimeout(function () {
-        var newLimit = window.innerWidth <= 768 ? 3 : 4;
-        if (limit !== newLimit) {
-          limit = newLimit;
-          update();
-        }
-      }, 100);
-    });
-  }
-
   /* ---------- boot ---------- */
   function boot() {
     injectSprite();
@@ -646,15 +477,12 @@
     initNav();
     initScrollSpy();
     initBackToTop();
-    initCopy();
     initYear();
     initVideoTriggers();
     initVideoTabs();
     initSchedule();
     initLightbox();
-    initContactForm();
     initReveal();
-    initContentsMore();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);

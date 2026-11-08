@@ -7,7 +7,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="動画編集 - あずらいと / Azurite">
   <meta property="og:description" content="動画編集について">
-  <meta property="og:image" content="img/GCw48R-m_400x400.jpg">
+  <meta property="og:image" content="img/azurite-icon.jpg">
   <meta name="description" content="動画編集について">
   <title>動画編集 - あずらいと / Azurite</title>
 
@@ -17,7 +17,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
     rel="stylesheet">
 
-  <!-- 新しいCSSアーキテクチャ -->
+  <!-- CSSアーキテクチャ -->
   <link rel="stylesheet" href="css/ress.css?v=2">
   <link rel="stylesheet" href="css/tokens.css?v=2">
   <link rel="stylesheet" href="css/base.css?v=2">
@@ -31,7 +31,7 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a href="index.html" class="site-logo">
-        <img src="img/GCw48R-m_400x400.jpg" alt="" class="site-logo__img" width="36" height="36" loading="lazy">
+        <img src="img/azurite-icon.jpg" alt="あずらいと アイコン" class="site-logo__img" width="36" height="36" loading="lazy">
         <span class="site-logo__text">あずらいと</span>
       </a>
       <div class="header-actions">
@@ -68,12 +68,155 @@
       </ul>
     </div>
 
-    <!-- Contact CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Portfolio</span>
+          <h2 class="section-title">編集した動画一覧</h2>
+          <p class="section-lead">
+            ジャンルに合わせたテンポ感やテロップなど、実際の編集スタイルは下よりご覧ください。</p>
+        </div>
+        <div id="video-tabs" class="reveal">
+          <!-- js/script.js がタブを生成します-->
+        </div>
+      </div>
+    </section>
+
     <section class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Scenes</span>
+          <h2 class="section-title">編集シーン抜粋</h2>
+          <p class="section-lead">実際の動画内から切り抜いたワンシーンのご紹介です。（画像クリックで拡大表示）</p>
+        </div>
+
+        <div class="grid grid--3">
+
+          <!-- シーン 1 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/scene-01-fortnite-tires.jpg" data-caption="タイヤを大量に増殖させたとき">
+              <img src="img/scene-01-fortnite-tires.jpg" alt="タイヤを大量に増殖させたとき" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral">Fortnite</span>
+              <p class="card__text">タイヤを大量に増殖させたとき</p>
+            </div>
+          </div>
+
+          <!-- シーン 2 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/scene-02-fortnite-death.jpg" data-caption="何もできずに死亡したとき">
+              <img src="img/scene-02-fortnite-death.jpg" alt="何もできずに死亡したとき" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral">Fortnite</span>
+              <p class="card__text">何もできずに死亡したとき</p>
+            </div>
+          </div>
+
+          <!-- シーン 3 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/scene-03-minecraft-lost-all.jpg" data-caption="全ロス後の様子">
+              <img src="img/scene-03-minecraft-lost-all.jpg" alt="全ロス後の様子" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral">Minecraft</span>
+              <p class="card__text">全ロス後の様子</p>
+            </div>
+          </div>
+
+          <!-- シーン 4 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/scene-04-fortnite-victory-royale.jpg" data-caption="VICTORY ROYALE!">
+              <img src="img/scene-04-fortnite-victory-royale.jpg" alt="VICTORY ROYALE!" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral">Fortnite</span>
+              <p class="card__text">VICTORY ROYALE!</p>
+            </div>
+          </div>
+
+          <!-- シーン 5 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/scene-05-minecraft-noteblock.jpg" data-caption="音ブロック演奏の様子">
+              <img src="img/scene-05-minecraft-noteblock.jpg" alt="音ブロック演奏の様子" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral">Minecraft</span>
+              <p class="card__text">音ブロック演奏の様子</p>
+            </div>
+          </div>
+
+          <!-- シーン 6 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/scene-06-fortnite-update-guide.jpg" data-caption="合成音声によるアプデ情報解説">
+              <img src="img/scene-06-fortnite-update-guide.jpg" alt="合成音声によるアプデ情報解説" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral">Fortnite</span>
+              <p class="card__text">合成音声によるアプデ情報解説</p>
+            </div>
+          </div>
+
+          <!-- シーン 7 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/scene-07-minecraft-pillar.jpg"
+              data-caption="1話を柱の建築だけに使った時の様子">
+              <img src="img/scene-07-minecraft-pillar.jpg" alt="1話を柱の建築だけに使った時の様子" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral">Minecraft</span>
+              <p class="card__text">1話を柱の建築だけに使った時の様子</p>
+            </div>
+          </div>
+
+          <!-- シーン 8 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/scene-08-promotion-keyboard.jpg"
+              data-caption="ゲーミングキーボードの案件をいただいた時の動画">
+              <img src="img/scene-08-promotion-keyboard.jpg" alt="ゲーミングキーボードの案件をいただいた時の動画" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral">Promotion</span>
+              <p class="card__text">ゲーミングキーボードの案件をいただいた時の動画</p>
+            </div>
+          </div>
+
+          <!-- シーン 9 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/scene-09-fast-food-simulator.jpg"
+              data-caption="ファストフード店を運営している様子">
+              <img src="img/scene-09-fast-food-simulator.jpg" alt="ファストフード店を運営している様子" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral">Fast Food Simulator</span>
+              <p class="card__text">ファストフード店を運営している様子</p>
+            </div>
+          </div>
+
+          <!-- シーン 10 -->
+          <div class="card scene-card reveal">
+            <div class="card__media" data-lightbox="img/scene-10-promotion-mousegrip.jpg"
+              data-caption="マウスグリップの案件をいただいた時の動画">
+              <img src="img/scene-10-promotion-mousegrip.jpg" alt="マウスグリップの案件をいただいた時の動画" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="badge badge--neutral">Fortnite</span>
+              <p class="card__text">マウスグリップの案件をいただいた時の動画</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="section">
       <div class="container container--narrow">
         <div class="cta-panel reveal">
           <div>
-            <h2 class="section-title" style="font-size: var(--fs-xl);">お仕事やコラボのご依頼</h2>
+            <h2 class="section-title">お仕事やコラボのご依頼</h2>
             <p class="section-lead">以下のリンクよりお気軽にご連絡ください。</p>
           </div>
           <div class="cta-panel__actions">
@@ -93,161 +236,6 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Portfolio</span>
-          <h2 class="section-title" style="font-size: var(--fs-xl);">編集した動画一覧</h2>
-          <p class="section-lead">
-            ジャンルに合わせたテンポ感やテロップなど、実際の編集スタイルは下よりご覧ください。</p>
-        </div>
-        <div id="video-tabs" class="reveal">
-          <!-- js/script.js がタブを生成します-->
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt">
-      <div class="container container--narrow">
-        <div class="section-head reveal">
-          <span class="eyebrow">Scenes</span>
-          <h2 class="section-title" style="font-size: var(--fs-xl);">編集シーン抜粋</h2>
-          <p class="section-lead">実際の動画内から切り抜いたワンシーンのご紹介です。（画像クリックで拡大表示）</p>
-        </div>
-
-        <div class="grid grid--3">
-
-          <!-- シーン 1 -->
-          <div class="card scene-card reveal">
-            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 031451.png" data-caption="タイヤを大量に増殖させたとき">
-              <img src="img/スクリーンショット 2026-09-21 031451.png" alt="タイヤを大量に増殖させたとき" loading="lazy">
-            </div>
-            <div class="card__body">
-              <span class="badge badge--neutral"
-                style="width: fit-content; margin-bottom: var(--space-2)">Fortnite</span>
-              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">タイヤを大量に増殖させたとき</p>
-            </div>
-          </div>
-
-          <!-- シーン 2 -->
-          <div class="card scene-card reveal">
-            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 031631.png" data-caption="何もできずに死亡したとき">
-              <img src="img/スクリーンショット 2026-09-21 031631.png" alt="何もできずに死亡したとき" loading="lazy">
-            </div>
-            <div class="card__body">
-              <span class="badge badge--neutral"
-                style="width: fit-content; margin-bottom: var(--space-2)">Fortnite</span>
-              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">何もできずに死亡したとき</p>
-            </div>
-          </div>
-
-          <!-- シーン 3 -->
-          <div class="card scene-card reveal">
-            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 031745.png" data-caption="全ロス後の様子">
-              <img src="img/スクリーンショット 2026-09-21 031745.png" alt="全ロス後の様子" loading="lazy">
-            </div>
-            <div class="card__body">
-              <span class="badge badge--neutral"
-                style="width: fit-content; margin-bottom: var(--space-2)">Minecraft</span>
-              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">全ロス後の様子</p>
-            </div>
-          </div>
-
-          <!-- シーン 4 -->
-          <div class="card scene-card reveal">
-            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 031817.png" data-caption="VICTORY ROYALE!">
-              <img src="img/スクリーンショット 2026-09-21 031817.png" alt="VICTORY ROYALE!" loading="lazy">
-            </div>
-            <div class="card__body">
-              <span class="badge badge--neutral"
-                style="width: fit-content; margin-bottom: var(--space-2)">Fortnite</span>
-              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">VICTORY ROYALE!</p>
-            </div>
-          </div>
-
-          <!-- シーン 5 -->
-          <div class="card scene-card reveal">
-            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 031904.png" data-caption="音ブロック演奏の様子">
-              <img src="img/スクリーンショット 2026-09-21 031904.png" alt="音ブロック演奏の様子" loading="lazy">
-            </div>
-            <div class="card__body">
-              <span class="badge badge--neutral"
-                style="width: fit-content; margin-bottom: var(--space-2)">Minecraft</span>
-              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">音ブロック演奏の様子</p>
-            </div>
-          </div>
-
-          <!-- シーン 6 -->
-          <div class="card scene-card reveal">
-            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 032019.png" data-caption="合成音声によるアプデ情報解説">
-              <img src="img/スクリーンショット 2026-09-21 032019.png" alt="合成音声によるアプデ情報解説" loading="lazy">
-            </div>
-            <div class="card__body">
-              <span class="badge badge--neutral"
-                style="width: fit-content; margin-bottom: var(--space-2)">Fortnite</span>
-              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">合成音声によるアプデ情報解説</p>
-            </div>
-          </div>
-
-          <!-- シーン 7 -->
-          <div class="card scene-card reveal">
-            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 032202.png"
-              data-caption="1話を柱の建築だけに使った時の様子">
-              <img src="img/スクリーンショット 2026-09-21 032202.png" alt="1話を柱の建築だけに使った時の様子" loading="lazy">
-            </div>
-            <div class="card__body">
-              <span class="badge badge--neutral"
-                style="width: fit-content; margin-bottom: var(--space-2)">Minecraft</span>
-              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">1話を柱の建築だけに使った時の様子</p>
-            </div>
-          </div>
-
-          <!-- シーン 8 -->
-          <div class="card scene-card reveal">
-            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 032320.png"
-              data-caption="ゲーミングキーボードの案件をいただいた時の動画">
-              <img src="img/スクリーンショット 2026-09-21 032320.png" alt="ゲーミングキーボードの案件をいただいた時の動画" loading="lazy">
-            </div>
-            <div class="card__body">
-              <span class="badge badge--neutral"
-                style="width: fit-content; margin-bottom: var(--space-2)">Promotion</span>
-              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">
-                ゲーミングキーボードの案件をいただいた時の動画</p>
-            </div>
-          </div>
-
-          <!-- シーン 9 -->
-          <div class="card scene-card reveal">
-            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 032418.png"
-              data-caption="ファストフード店を運営している様子">
-              <img src="img/スクリーンショット 2026-09-21 032418.png" alt="ファストフード店を運営している様子" loading="lazy">
-            </div>
-            <div class="card__body">
-              <span class="badge badge--neutral" style="width: fit-content; margin-bottom: var(--space-2)">Fast Food
-                Simulator</span>
-              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">ファストフード店を運営している様子</p>
-            </div>
-          </div>
-
-          <!-- シーン 10 -->
-          <div class="card scene-card reveal">
-            <div class="card__media" data-lightbox="img/スクリーンショット 2026-09-21 033018.png"
-              data-caption="マウスグリップの案件をいただいた時の動画">
-              <img src="img/スクリーンショット 2026-09-21 033018.png" alt="マウスグリップの案件をいただいた時の動画" loading="lazy">
-            </div>
-            <div class="card__body">
-              <span class="badge badge--neutral"
-                style="width: fit-content; margin-bottom: var(--space-2)">Fortnite</span>
-              <p class="card__text" style="color: var(--color-text); font-weight: var(--fw-bold)">マウスグリップの案件をいただいた時の動画
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
   </main>
 
   <footer class="site-footer">
@@ -255,7 +243,7 @@
       <div class="site-footer__grid">
         <div>
           <a href="index.html" class="site-logo">
-            <img src="img/GCw48R-m_400x400.jpg" alt="" class="site-logo__img" width="32" height="32" loading="lazy">
+            <img src="img/azurite-icon.jpg" alt="あずらいと アイコン" class="site-logo__img" width="32" height="32" loading="lazy">
             <span class="site-logo__text">あずらいと</span>
           </a>
           <p class="site-footer__desc">ゲーム実況・動画クリエイター</p>

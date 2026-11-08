@@ -50,19 +50,16 @@
   /* ブランド固有色 */
   --brand-youtube: hsl(0 100% 50%);
   --brand-x:       hsl(0 0% 100%);
-  --brand-twitch:  hsl(264 100% 64%);
-  --brand-tiktok:  hsl(176 100% 44%);
-  --brand-insta:   hsl(330 80% 58%);
-  --brand-booth:   hsl(352 90% 60%);
 
   /* ---------- Color: Semantic (Light theme = default) ---------- */
-  --color-bg:            var(--ink-50);
+  --color-bg:            #ffffff;
+  --color-bg-alt:        var(--ink-50);
   --color-bg-elevated:   var(--ink-0);
-  --color-surface:       hsl(0 0% 100% / 0.82);
+  --color-surface:       var(--ink-0);
   --color-surface-solid: var(--ink-0);
-  --color-surface-hover: hsl(0 0% 100% / 1);
-  --color-border:        hsl(224 30% 40% / 0.14);
-  --color-border-strong: hsl(220 70% 50% / 0.3);
+  --color-surface-hover: var(--ink-50);
+  --color-border:        hsl(224 25% 20% / 0.1);
+  --color-border-strong: hsl(224 25% 20% / 0.2);
 
   --color-text:          var(--ink-800);
   --color-text-muted:    var(--ink-500);
@@ -71,29 +68,25 @@
 
   --color-primary:       var(--azure-600);
   --color-primary-hover: var(--azure-700);
-  --color-primary-soft:  hsl(222 80% 46% / 0.1);
+  --color-primary-soft:  hsl(222 80% 46% / 0.08);
   --color-on-primary:    var(--ink-0);
   --color-accent:        var(--ember-500);
   --color-accent-hover:  var(--ember-400);
-  --color-accent-soft:   hsl(18 92% 55% / 0.12);
+  --color-accent-soft:   hsl(18 92% 55% / 0.1);
   --color-highlight:     var(--azure-500);
 
-  --color-success: hsl(152 64% 50%);
-  --color-danger:  hsl(356 85% 62%);
-  --color-live:    hsl(356 90% 58%);
+  --color-success: hsl(152 64% 42%);
+  --color-danger:  hsl(356 80% 56%);
+  --color-live:    hsl(356 85% 54%);
 
-  --gradient-brand:  linear-gradient(120deg, var(--azure-500) 0%, var(--cyan-400) 100%);
-  --gradient-accent: linear-gradient(120deg, var(--ember-500) 0%, var(--ember-300) 100%);
-  --gradient-text: linear-gradient(100deg, var(--ink-800) 10%, var(--azure-600) 60%, var(--azure-400) 100%);
-  --gradient-hero:
-    radial-gradient(60% 60% at 15% 10%, hsl(214 95% 65% / 0.28) 0%, transparent 70%),
-    radial-gradient(50% 50% at 90% 20%, hsl(190 95% 55% / 0.2) 0%, transparent 70%),
-    radial-gradient(45% 55% at 70% 100%, hsl(24 98% 62% / 0.16) 0%, transparent 70%);
-  --grid-line: hsl(222 60% 40% / 0.06);
+  --gradient-brand:  linear-gradient(135deg, var(--azure-600) 0%, var(--azure-500) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--ember-500) 0%, var(--ember-400) 100%);
+  --gradient-text:   linear-gradient(100deg, var(--ink-800) 10%, var(--azure-600) 100%);
+  --grid-line:       hsl(222 40% 40% / 0.04);
 
   /* ---------- Typography ---------- */
   --font-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, system-ui, sans-serif;
-  --font-display: "Outfit", "Noto Sans JP", system-ui, sans-serif;
+  --font-display: "Inter", "Noto Sans JP", system-ui, sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", Consolas, monospace;
 
   /* 流体タイポグラフィ（375px → 1280px の間でなめらかに変化） */
@@ -139,35 +132,35 @@
 
   /* ---------- Layout ---------- */
   --container-max: 1200px;
-  --container-narrow: 1200px;
+  --container-narrow: 940px;
   --header-h: 64px;
   --tap-min: 44px;           /* タップ領域の最小サイズ（WCAG 2.5.5） */
 
   /* ---------- Radius ---------- */
-  --radius-xs: 6px;
-  --radius-sm: 10px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
   --radius-pill: 999px;
 
   /* ---------- Shadow / Glow ---------- */
-  --shadow-sm: 0 1px 2px hsl(225 40% 20% / 0.06);
-  --shadow-md: 0 8px 24px -10px hsl(225 40% 20% / 0.18);
-  --shadow-lg: 0 24px 48px -18px hsl(225 40% 20% / 0.25);
-  --shadow-glow: 0 0 0 1px hsl(222 80% 46% / 0.25), 0 12px 32px -14px hsl(222 80% 46% / 0.4);
-  --shadow-glow-accent: 0 12px 32px -10px hsl(24 98% 55% / 0.6);
+  --shadow-sm: 0 1px 3px hsl(225 30% 15% / 0.05);
+  --shadow-md: 0 6px 16px -6px hsl(225 30% 15% / 0.1);
+  --shadow-lg: 0 14px 28px -10px hsl(225 30% 15% / 0.14);
+  --shadow-glow: 0 4px 14px -4px hsl(222 80% 46% / 0.28);
+  --shadow-glow-accent: 0 4px 14px -4px hsl(24 98% 55% / 0.35);
   --focus-ring: 0 0 0 3px var(--color-bg), 0 0 0 5px var(--color-highlight);
 
   /* ---------- Effects ---------- */
-  --blur-glass: saturate(160%) blur(16px);
+  --blur-glass: saturate(140%) blur(12px);
 
   /* ---------- Motion ---------- */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --dur-fast: 150ms;
-  --dur-base: 250ms;
-  --dur-slow: 500ms;
+  --dur-fast: 140ms;
+  --dur-base: 200ms;
+  --dur-slow: 320ms;
 
   /* ---------- Z-index ---------- */
   --z-base: 1;

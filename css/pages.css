@@ -9,19 +9,6 @@
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image:
-    linear-gradient(var(--grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-  background-size: 48px 48px;
-  mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 30%, transparent 80%);
-  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 30%, #000 30%, transparent 80%);
-}
-
 .hero__inner {
   display: grid;
   gap: var(--space-12);
@@ -46,19 +33,13 @@
   }
 }
 
-.hero__status {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-2);
-  margin-bottom: var(--space-5);
-}
-
 .hero__title {
   font-size: var(--fs-4xl);
   font-weight: var(--fw-black);
   line-height: 1.05;
   letter-spacing: 0.02em;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 .hero__title-en {
@@ -104,7 +85,14 @@
 }
 
 .hero__stats {
+  justify-content: center;
   margin-top: var(--space-10);
+}
+
+@media (min-width: 1025px) {
+  .hero__stats {
+    justify-content: flex-start;
+  }
 }
 
 /* アバター + 軌道リング */
@@ -134,27 +122,12 @@
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 1px dashed var(--color-border-strong);
-  animation: spin 40s linear infinite;
+  border: 1px solid var(--color-border-strong);
 }
 
 .hero__ring--inner {
-  inset: 9%;
-  border-style: solid;
-  border-color: transparent;
-  background: conic-gradient(from 0deg, var(--azure-500), var(--cyan-400), var(--ember-400), var(--azure-500)) border-box;
-  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) padding-box exclude, linear-gradient(#000 0 0);
-  border-width: 3px;
-  animation-duration: 12s;
-  animation-direction: reverse;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  inset: 8%;
+  border: 2px solid var(--color-primary-soft);
 }
 
 .hero__avatar {
@@ -163,7 +136,7 @@
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 30px 80px -20px hsl(24 98% 55% / 0.45), 0 0 0 8px var(--color-bg);
+  box-shadow: var(--shadow-lg), 0 0 0 6px var(--color-bg);
 }
 
 .hero__float {
@@ -174,14 +147,11 @@
   padding: var(--space-2) var(--space-3);
   border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-pill);
-  background: color-mix(in srgb, var(--color-surface-solid) 85%, transparent);
-  -webkit-backdrop-filter: var(--blur-glass);
-  backdrop-filter: var(--blur-glass);
-  box-shadow: var(--shadow-md);
+  background: var(--color-surface-solid);
+  box-shadow: var(--shadow-sm);
   font-size: var(--fs-xs);
   font-weight: var(--fw-bold);
   white-space: nowrap;
-  animation: float 6s var(--ease-in-out) infinite;
 }
 
 .hero__float img {
@@ -200,13 +170,11 @@
 .hero__float--2 {
   top: 46%;
   right: -8%;
-  animation-delay: -2s;
 }
 
 .hero__float--3 {
   bottom: 6%;
   left: 4%;
-  animation-delay: -4s;
 }
 
 @media (max-width: 640px) {
@@ -228,32 +196,17 @@
   }
 }
 
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  .hero__ring,
-  .hero__float {
-    animation: none;
-  }
-}
-
 /* ---------- Home: Pinned（初見さん向け） ---------- */
 .pinned {
   display: grid;
   gap: var(--space-8);
   align-items: center;
   grid-template-columns: 1fr;
+  margin-bottom: var(--space-12);
+  padding: clamp(var(--space-5), 4vw, var(--space-8));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-alt);
 }
 
 @media (min-width: 1025px) {
@@ -266,17 +219,8 @@
 .pinned__player {
   position: relative;
   min-width: 0;
-}
-
-.pinned__player::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  z-index: -1;
-  border-radius: calc(var(--radius-lg) + 2px);
-  background: var(--gradient-brand);
-  filter: blur(24px);
-  opacity: 0.35;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
 }
 
 .pinned__title {
@@ -350,38 +294,9 @@
   color: var(--color-text-muted);
 }
 
-.hashtags {
-  display: grid;
-  gap: var(--space-3);
-  margin-top: var(--space-6);
-}
-
-.hashtags__title {
-  font-size: var(--fs-sm);
-  font-family: var(--font-sans);
-  color: var(--color-text-muted);
-}
-
-/* ---------- Home: Main games ---------- */
-.game-card {
-  flex-direction: row;
-  align-items: flex-start;
-  gap: var(--space-4);
-  padding: var(--space-5);
-}
-
-.game-card__icon {
-  flex-shrink: 0;
-  width: 56px;
-  height: 56px;
-  padding: 6px;
-  border-radius: var(--radius-sm);
-  background: #fff;
-  object-fit: contain;
-}
-
-.game-card .card__body {
-  padding: 0;
+.profile__history .group__title {
+  font-size: var(--fs-md);
+  margin-bottom: var(--space-4);
 }
 
 /* ---------- Home: Contact CTA ---------- */
@@ -390,14 +305,11 @@
   display: grid;
   gap: var(--space-6);
   align-items: center;
-  padding: clamp(var(--space-8), 6vw, var(--space-16));
-  border: 1px solid var(--color-bor der-strong);
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  background:
-    radial-gradient(60% 120% at 0% 0%, hsl(218 86% 54% / 0.35), transparent 60%),
-    radial-gradient(50% 120% at 100% 100%, hsl(24 98% 60% / 0.25), transparent 60%),
-    var(--color-surface-solid);
+  padding: clamp(var(--space-8), 5vw, var(--space-12));
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-solid);
+  box-shadow: var(--shadow-sm);
   text-align: center;
 }
 
@@ -421,15 +333,49 @@
   }
 }
 
-/* ---------- Video edit: scenes ---------- */
+/* ---------- Video edit: scenes & Lightbox ---------- */
 .scene-card .card__media {
   cursor: zoom-in;
   position: relative;
   z-index: 10;
 }
 
+.scene-card .card__media::after,
+.media-grid__zoom[data-lightbox]::after {
+  content: "拡大表示";
+  position: absolute;
+  right: var(--space-2);
+  bottom: var(--space-2);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  background: hsl(222 47% 11% / 0.72);
+  color: #fff;
+  font-size: var(--fs-2xs);
+  font-weight: var(--fw-bold);
+  line-height: 1.5;
+  pointer-events: none;
+  opacity: 0.85;
+  transition: opacity var(--dur-fast), background-color var(--dur-fast);
+}
+
+.scene-card:hover .card__media::after,
+.media-grid__zoom[data-lightbox]:hover::after {
+  opacity: 1;
+  background: var(--color-primary);
+}
+
 .scene-card .card__body {
   padding: var(--space-4) var(--space-5) var(--space-5);
+}
+
+.scene-card .badge {
+  width: fit-content;
+  margin-bottom: var(--space-1);
+}
+
+.scene-card .card__text {
+  color: var(--color-text);
+  font-weight: var(--fw-bold);
 }
 
 .lightbox-img {
@@ -438,78 +384,4 @@
   max-height: calc(100dvh - 160px);
   object-fit: contain;
   background: #000;
-}
-
-/* ---------- Contact page ---------- */
-.contact-layout {
-  display: grid;
-  gap: var(--space-8);
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 1025px) {
-  .contact-layout {
-    grid-template-columns: 1fr 1.6fr;
-    align-items: start;
-  }
-
-  .contact-layout__aside {
-    position: sticky;
-    top: calc(var(--header-h) + var(--space-6));
-  }
-}
-
-.contact-steps {
-  display: grid;
-  gap: var(--space-4);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: step;
-}
-
-.contact-steps li {
-  position: relative;
-  padding-left: var(--space-12);
-  font-size: var(--fs-sm);
-  color: var(--color-text-muted);
-  counter-increment: step;
-}
-
-.contact-steps li strong {
-  display: block;
-  color: var(--color-text);
-}
-
-.contact-steps li::before {
-  content: counter(step);
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: grid;
-  place-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: var(--gradient-brand);
-  color: var(--color-on-primary);
-  font-family: var(--font-display);
-  font-weight: var(--fw-black);
-}
-
-.result-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-}
-
-/* ---------- Guidelines ---------- */
-.guide-grid {
-  display: grid;
-  gap: var(--space-5);
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-}
-
-.guide-section+.guide-section {
-  margin-top: var(--space-16);
 }

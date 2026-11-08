@@ -7,7 +7,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="あずらいと / Azurite">
   <meta property="og:description" content="ゲーム実況者「あずらいと」の公式サイト。フォートナイトを中心に動画投稿・配信中！">
-  <meta property="og:image" content="img/GCw48R-m_400x400.jpg">
+  <meta property="og:image" content="img/azurite-icon.jpg">
   <meta name="description" content="ゲーム実況者「あずらいと」の公式サイト。フォートナイトを中心に動画投稿・配信中！">
   <title>あずらいと / Azurite - Official Website</title>
 
@@ -31,7 +31,7 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a href="#" class="site-logo">
-        <img src="img/GCw48R-m_400x400.jpg" alt="" class="site-logo__img" width="36" height="36" loading="lazy">
+        <img src="img/azurite-icon.jpg" alt="あずらいと アイコン" class="site-logo__img" width="36" height="36" loading="lazy">
         <span class="site-logo__text">あずらいと</span>
       </a>
       <div class="header-actions">
@@ -63,10 +63,7 @@
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__content reveal">
-          <div class="hero__status">
-            <span class="badge badge--live">PLAYER / EDITOR</span>
-          </div>
-          <h1 class="hero__title" style="word-break: keep-all; overflow-wrap: anywhere;">
+          <h1 class="hero__title">
             ゲーム実況<br>
             &動画編集<span class="hero__title-en">AZURITE</span>
           </h1>
@@ -102,16 +99,16 @@
         <div class="hero__visual reveal">
           <div class="hero__ring"></div>
           <div class="hero__ring hero__ring--inner"></div>
-          <img src="img/GCw48R-m_400x400.jpg" alt="あずらいと" class="hero__avatar" fetchpriority="high">
+          <img src="img/azurite-icon.jpg" alt="あずらいと アイコン" class="hero__avatar" fetchpriority="high">
 
           <div class="hero__float hero__float--1">
-            <img src="img/fn.webp" alt=""> Fortnite
+            <img src="img/game-fortnite.webp" alt="フォートナイト"> Fortnite
           </div>
           <div class="hero__float hero__float--2">
-            <img src="img/Valorant-Logo-PNG-Photo.png" alt=""> Valorant
+            <img src="img/game-valorant.png" alt="VALORANT"> Valorant
           </div>
           <div class="hero__float hero__float--3">
-            <img src="img/minecraft.png" alt=""> Minecraft
+            <img src="img/game-minecraft.png" alt="マインクラフト"> Minecraft
           </div>
         </div>
       </div>
@@ -122,18 +119,23 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Schedule</span>
-          <h2 class="section-title" style="font-size: var(--fs-xl);">今週のスケジュール</h2>
+          <h2 class="section-title">今週のスケジュール</h2>
           <p class="section-lead" id="schedule-note">今週の配信予定です（変更になる場合があります！）</p>
         </div>
         <ul id="schedule" class="schedule reveal">
-          <!-- js/script.js がここを埋めまぁE-->
+          <!-- js/script.js でスケジュールを生成 -->
         </ul>
       </div>
     </section>
 
-    <!-- Pinned Video -->
+    <!-- Videos (Pinned + Tabs) -->
     <section id="videos" class="section">
       <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Videos</span>
+          <h2 class="section-title">動画一覧</h2>
+        </div>
+
         <div class="pinned reveal">
           <div class="pinned__player">
             <button class="embed-lite" type="button" data-video-id="mC4cfe-H-co"
@@ -179,16 +181,7 @@
             </a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Popular Videos Tabs -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Videos</span>
-          <h2 class="section-title" style="font-size: var(--fs-xl);">動画一覧</h2>
-        </div>
         <div id="video-tabs" class="reveal">
           <!-- js/script.js がタブを生成しました-->
         </div>
@@ -200,12 +193,12 @@
       <div class="container container--narrow">
         <div class="section-head reveal">
           <span class="eyebrow">About</span>
-          <h2 class="section-title" style="font-size: var(--fs-xl);">プロフィール</h2>
+          <h2 class="section-title">プロフィール</h2>
         </div>
         <div class="profile reveal">
           <div class="profile__info">
             <div class="profile__intro">
-              <img src="img/GCw48R-m_400x400.jpg" alt="" class="profile__avatar" loading="lazy">
+              <img src="img/azurite-icon.jpg" alt="あずらいと アイコン" class="profile__avatar" loading="lazy">
               <div>
                 <h3 class="profile__name">あずらいと</h3>
                 <p class="profile__role">実況者 / 動画編集者</p>
@@ -217,7 +210,7 @@
               ライブ配信も行っているので、ぜひ見に来てください！</p>
           </div>
           <div class="profile__history">
-            <h4 class="group__title" style="font-size: var(--fs-md); margin-bottom: var(--space-4);">活動履歴</h4>
+            <h4 class="group__title">活動履歴</h4>
             <ul class="timeline">
               <li class="timeline__item"><span class="timeline__text">Fortnite成長記録 200万回再生</span><span
                   class="timeline__date">2025.09</span></li>
@@ -240,12 +233,12 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Contents</span>
-          <h2 class="section-title" style="font-size: var(--fs-xl);">その他コンテンツ</h2>
+          <h2 class="section-title">その他コンテンツ</h2>
         </div>
-        <div class="grid grid--2 contents-grid reveal">
+        <div class="grid grid--3 contents-grid reveal">
           <a href="games.html" class="card card--link">
             <div class="card__media">
-              <img src="img\タイトルなし.png" alt="プレイ中のゲーム" loading="lazy">
+              <img src="img/contents-games.jpg" alt="プレイ中のゲーム一覧" loading="lazy">
             </div>
             <div class="card__body">
               <h3 class="card__title">Games</h3>
@@ -257,7 +250,7 @@
           </a>
           <a href="devices.html" class="card card--link">
             <div class="card__media">
-              <img src="img/デバイス.png" alt="使用デバイス" loading="lazy">
+              <img src="img/contents-devices.jpg" alt="使用デバイス・PCスペック一覧" loading="lazy">
             </div>
             <div class="card__body">
               <h3 class="card__title">Devices & Specs</h3>
@@ -269,19 +262,16 @@
           </a>
           <a href="videoedit.html" class="card card--link">
             <div class="card__media">
-              <img src="img/スクリーンショット 2026-09-21 040148.png" alt="動画編集" loading="lazy">
+              <img src="img/contents-videoedit.jpg" alt="動画編集ポートフォリオ" loading="lazy">
             </div>
             <div class="card__body">
               <h3 class="card__title">Video Editing</h3>
-              <p class="card__text">動画編集ソフトや環境について</p>
+              <p class="card__text">これまでに編集した動画や編集シーンの紹介</p>
               <span class="card__arrow"><svg class="icon" aria-hidden="true">
                   <use href="#i-arrow-right"></use>
                 </svg></span>
             </div>
           </a>
-        </div>
-        <div class="center-actions reveal" style="margin-top: var(--space-8);">
-          <button type="button" class="btn btn--ghost" id="btn-more-contents">もっと見る</button>
         </div>
       </div>
     </section>
@@ -291,7 +281,7 @@
       <div class="container container--narrow">
         <div class="cta-panel reveal">
           <div>
-            <h2 class="section-title" style="font-size: var(--fs-xl);">お仕事やコラボのご依頼</h2>
+            <h2 class="section-title">お仕事やコラボのご依頼</h2>
             <p class="section-lead">X（旧Twitter）のDM、またはお問い合わせフォームからお気軽にご連絡ください。</p>
           </div>
           <div class="cta-panel__actions">
@@ -299,7 +289,6 @@
               target="_blank" rel="noopener" class="btn btn--forms">
               <svg class="icon" aria-hidden="true">
                 <use href="#i-mail"></use>
-                <!-- icon is optional, fallback to just text if not found, or maybe just text -->
               </svg>Google Forms
             </a>
             <a href="https://x.com/Azuriteeeee" target="_blank" rel="noopener" class="btn btn--primary">
@@ -319,7 +308,7 @@
       <div class="site-footer__grid">
         <div>
           <a href="index.html" class="site-logo">
-            <img src="img/GCw48R-m_400x400.jpg" alt="" class="site-logo__img" width="32" height="32" loading="lazy">
+            <img src="img/azurite-icon.jpg" alt="あずらいと アイコン" class="site-logo__img" width="32" height="32" loading="lazy">
             <span class="site-logo__text">あずらいと</span>
           </a>
           <p class="site-footer__desc">ゲーム実況・動画クリエイター</p>
@@ -352,7 +341,7 @@
   </footer>
 
   <button type="button" class="back-to-top" aria-label="ページトップへ戻る">
-    <svg class=" icon" aria-hidden="true">
+    <svg class="icon" aria-hidden="true">
       <use href="#i-arrow-up"></use>
     </svg>
   </button>
