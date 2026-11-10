@@ -172,13 +172,3 @@
 
   color-scheme: light;
 }
-
-
-
-@media (prefers-reduced-motion: reduce) {
-  :root {
-    --dur-fast: 0ms;
-    --dur-base: 0ms;
-    --dur-slow: 0ms;
-  }
-}

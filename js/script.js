@@ -13,6 +13,7 @@
 
   var DATA = window.SITE_DATA || {};
   var root = document.documentElement;
+  root.classList.add("js");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------- helpers ---------- */
@@ -175,10 +176,36 @@
 
   function initReveal() {
     var items = $$(".reveal");
+    if (!items.length) return;
     if (!("IntersectionObserver" in window)) {
       items.forEach(function (el) { el.classList.add("is-visible"); });
       return;
     }
+
+    var isHome = Boolean($(".hero"));
+    var heroItems = [];
+    var scrollItems = [];
+    items.forEach(function (el) {
+      if (el.closest(".hero, .page-hero, .page-hero + .section")) {
+        heroItems.push(el);
+      } else {
+        scrollItems.push(el);
+      }
+    });
+
+    // ファーストビュー内の要素は初回描画後に順番にフェードイン
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        heroItems.forEach(function (el, idx) {
+          setTimeout(function () {
+            el.classList.add("is-visible");
+          }, idx * 80);
+        });
+      });
+    });
+
+    if (!scrollItems.length) return;
+
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -186,8 +213,28 @@
           io.unobserve(entry.target);
         }
       });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
-    items.forEach(function (el) { io.observe(el); });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0 });
+
+    var observing = false;
+    function startObserving() {
+      if (observing) return;
+      observing = true;
+      scrollItems.forEach(function (el) { io.observe(el); });
+    }
+
+    // トップページ（.hero）でスクロール前なら、少しスクロールするまで下部の要素を隠しておく
+    var canScroll = document.documentElement.scrollHeight > window.innerHeight + 16;
+    if (!isHome || window.scrollY > 16 || !canScroll) {
+      startObserving();
+    } else {
+      var onFirstScroll = function () {
+        if (window.scrollY > 8) {
+          window.removeEventListener("scroll", onFirstScroll);
+          startObserving();
+        }
+      };
+      window.addEventListener("scroll", onFirstScroll, { passive: true });
+    }
   }
 
   function initYear() {
