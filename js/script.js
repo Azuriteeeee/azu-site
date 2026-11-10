@@ -147,11 +147,11 @@
     }
 
     var hero = $(".hero");
-    if (hero && homeLink) {
+    if (hero) {
       var heroObserver = new IntersectionObserver(function(entries) {
         if (entries[0].isIntersecting) {
           links.forEach(function(l) { l.removeAttribute("aria-current"); });
-          homeLink.setAttribute("aria-current", "page");
+          if (homeLink) homeLink.setAttribute("aria-current", "page");
         }
       }, { rootMargin: "-10% 0px -90% 0px" });
       heroObserver.observe(hero);

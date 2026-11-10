@@ -46,19 +46,10 @@
 .hero__title {
   font-size: var(--fs-4xl);
   font-weight: var(--fw-black);
-  line-height: 1.05;
+  line-height: var(--lh-tight);
   letter-spacing: 0.02em;
   word-break: keep-all;
   overflow-wrap: anywhere;
-}
-
-.hero__title-en {
-  display: block;
-  margin-top: var(--space-3);
-  font-size: var(--fs-lg);
-  font-weight: var(--fw-medium);
-  letter-spacing: 0.4em;
-  color: var(--color-text-muted);
 }
 
 .hero__tagline {
@@ -79,7 +70,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--space-3);
-  margin-top: var(--space-8);
+  margin-top: var(--space-10);
 }
 
 @media (min-width: 1025px) {
@@ -90,7 +81,7 @@
 
 .hero__stats {
   justify-content: center;
-  margin-top: var(--space-10);
+  margin-top: var(--space-12);
 }
 
 @media (min-width: 1025px) {
@@ -100,10 +91,6 @@
 }
 
 @media (max-width: 640px) {
-  .hero__title-en {
-    margin-top: var(--space-4);
-  }
-
   .hero__tagline {
     margin-top: var(--space-6);
     line-height: var(--lh-snug);
@@ -111,7 +98,7 @@
 
   .hero__actions {
     gap: var(--space-2);
-    margin-top: var(--space-4);
+    margin-top: var(--space-6);
   }
 
   .hero__actions .btn {
@@ -120,7 +107,7 @@
   }
 
   .hero__stats {
-    margin-top: var(--space-4);
+    margin-top: var(--space-6);
   }
 }
 
@@ -166,63 +153,6 @@
   border-radius: 50%;
   object-fit: cover;
   box-shadow: var(--shadow-lg), 0 0 0 6px var(--color-bg);
-}
-
-.hero__float {
-  position: absolute;
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-3);
-  border: 1px solid var(--color-border-strong);
-  border-radius: var(--radius-pill);
-  background: var(--color-surface-solid);
-  box-shadow: var(--shadow-sm);
-  font-size: var(--fs-xs);
-  font-weight: var(--fw-bold);
-  white-space: nowrap;
-}
-
-.hero__float img {
-  width: 22px;
-  height: 22px;
-  border-radius: 6px;
-  object-fit: contain;
-  background: #fff;
-}
-
-.hero__float--1 {
-  top: 8%;
-  left: -4%;
-}
-
-.hero__float--2 {
-  top: 46%;
-  right: -8%;
-}
-
-.hero__float--3 {
-  bottom: 6%;
-  left: 4%;
-}
-
-@media (max-width: 640px) {
-  .hero__float {
-    font-size: var(--fs-2xs);
-    padding: var(--space-1) var(--space-2);
-  }
-
-  .hero__float--1 {
-    left: -10%;
-  }
-
-  .hero__float--2 {
-    right: -14%;
-  }
-
-  .hero__float--3 {
-    left: -6%;
-  }
 }
 
 /* ---------- Home: Pinned（初見さん向け） ---------- */
